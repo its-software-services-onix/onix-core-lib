@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"coverage-gutters.lcovname": "\\coverage.info",
+		"coverage-gutters.showRulerCoverage": true			
+	}
+}
