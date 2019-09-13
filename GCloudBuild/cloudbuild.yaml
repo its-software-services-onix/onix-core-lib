@@ -21,5 +21,5 @@ steps:
 
 - name: 'microsoft/dotnet:2.2-sdk'
   entrypoint: 'dotnet'
-  args: ['nuget', 'push', '${_PACKAGE_PATH}.${_NUGET_VERSION}.nupkg ', '-k ${_NUGET_PUSH_KEY}', '-s ${_NUGET_API}']
+  args: ['nuget', 'push', '${_PACKAGE_PATH}.${_NUGET_VERSION}.nupkg', '-k', '${_NUGET_PUSH_KEY}', '-s', '${_NUGET_API}']
 
