@@ -1,0 +1,23 @@
+substitutions:
+  _VERSION: "0.0.909"
+  _DOCKER_VERSION: "latest"
+
+steps:
+- name: 'gcr.io/its-artifact-commons/dotnet-sonar:2.2-4'
+  entrypoint: 'bash'
+  args: ['/workspace/GCloudBuild/sonar.bash']
+  env: 
+    - 'SONAR_KEY=${_SONAR_KEY}'
+    - 'BUILT_VERSION=${_VERSION}'
+    - 'BRANCH_NAME=${BRANCH_NAME}'
+    - 'COMMIT_SHA=${COMMIT_SHA}'
+    
+- name: 'microsoft/dotnet:2.2-sdk'
+  entrypoint: 'dotnet'
+  args: ['build', 'OnixCore.sln', '-p:Version=${_VERSION}']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_VERSION}', '-f', '/workspace/GCloudBuild/Dockerfile', '-t', 'gcr.io/${PROJECT_ID}/onix-core:${_DOCKER_VERSION}', '/workspace' ]
+
+images: ['gcr.io/${PROJECT_ID}/onix-core:${_DOCKER_VERSION}']
+
