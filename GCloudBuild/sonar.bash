@@ -3,7 +3,7 @@
 #Be careful to set this file without \r
 
 WORK_DIR=/OnixCore
-SOLUTION_DIR=$WORK_DIR/OnixCore
+SOLUTION_DIR=$WORK_DIR/onix-core
 
 mkdir -p ${WORK_DIR}
 cd ${WORK_DIR}
