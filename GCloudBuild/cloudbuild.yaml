@@ -21,14 +21,14 @@ steps:
     - OnixCore.sln 
     - -c
     - Release 
-    - -p:Version=${_VERSION}${SHORT_SHA}
+    - -p:Version=${_VERSION}
 
 - name: 'microsoft/dotnet:2.2-sdk'
   entrypoint: 'dotnet'
   args:
     - nuget
     - push
-    - ${_PACKAGE_PATH}.${_VERSION}${SHORT_SHA}.nupkg
+    - ${_PACKAGE_PATH}.${_VERSION}.nupkg
     - -k
     - ${_NUGET_PUSH_KEY}
     - -s
