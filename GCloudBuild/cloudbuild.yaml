@@ -3,8 +3,6 @@ substitutions:
   _NUGET_API: "https://api.nuget.org/v3/index.json"
   _NUGET_PUSH_KEY: "oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u"
   _PACKAGE_PATH: "/workspace/OnixCore/bin/Release/OnixCore"
-  _TAG_COMMAND: "date -u +%Y%m%dT%H%M"
-  _SHORT_SHA_EX: "${SHORT_SHA}"
 
 steps:
 
@@ -27,14 +25,14 @@ steps:
     - OnixCore.sln 
     - -c
     - Release 
-    - -p:Version=${_VERSION}${_SHORT_SHA_EX}
+    - -p:Version=${_VERSION}${SHORT_SHA}
 
 - name: 'microsoft/dotnet:2.2-sdk'
   entrypoint: 'dotnet'
   args:
     - nuget
     - push
-    - ${_PACKAGE_PATH}.${_VERSION}${_SHORT_SHA_EX}.nupkg
+    - ${_PACKAGE_PATH}.${_VERSION}${SHORT_SHA}.nupkg
     - -k
     - ${_NUGET_PUSH_KEY}
     - -s
