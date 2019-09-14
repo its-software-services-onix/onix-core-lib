@@ -3,7 +3,7 @@ substitutions:
   _NUGET_VERSION: "0.0.999"
   _NUGET_API: "https://api.nuget.org/v3/index.json"
   _NUGET_PUSH_KEY: "oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u"
-  _PACKAGE_PATH: "/workspace/OnixCore/bin/Debug/OnixCore"
+  _PACKAGE_PATH: "/workspace/OnixCore/bin/Release/OnixCore"
 
 steps:
 - name: 'gcr.io/its-artifact-commons/dotnet-sonar:2.2-4'
