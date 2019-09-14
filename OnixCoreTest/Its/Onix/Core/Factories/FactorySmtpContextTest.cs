@@ -34,6 +34,7 @@ namespace Its.Onix.Core.Factories
             FactorySmtpContext.SetLoggerFactory(new Mock<ILoggerFactory>().Object);
 
             ISmtpContext opt = FactorySmtpContext.CreateSmtpObject(apiName);
+            opt.GetLogger();
             Assert.IsNotNull(opt, "Object must not be null!!!");
         }          
     }    
