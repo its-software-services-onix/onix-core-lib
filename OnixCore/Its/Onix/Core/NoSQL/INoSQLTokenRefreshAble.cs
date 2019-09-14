@@ -2,7 +2,7 @@ using System;
 
 namespace Its.Onix.Core.NoSQL
 {
-	public interface INoSQLTokenRefreshAble
+	public interface INoSqlTokenRefreshAble
 	{
         void SetRefreshInterval(long refreshRate);
         DateTime GetLastRefreshDtm();

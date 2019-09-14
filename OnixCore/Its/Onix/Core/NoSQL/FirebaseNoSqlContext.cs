@@ -12,7 +12,7 @@ using Its.Onix.Core.Utils;
 
 namespace Its.Onix.Core.NoSQL
 {    
-	public class FirebaseNoSqlContext : INoSqlContext, INoSQLTokenRefreshAble
+	public class FirebaseNoSqlContext : INoSqlContext, INoSqlTokenRefreshAble
 	{
         private ILogger appLogger;
 
