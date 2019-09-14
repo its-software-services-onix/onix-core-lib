@@ -1,78 +1,471 @@
-SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\LogUtils.cs
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\LogUtils.cs
 FN:8,System.Void Its.Onix.Core.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])
-FNDA:11,System.Void Its.Onix.Core.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])
-DA:9,11
-DA:10,11
+FNDA:0,System.Void Its.Onix.Core.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])
+DA:9,0
+DA:10,0
 DA:11,0
 DA:12,0
 DA:13,0
-DA:14,11
+DA:14,0
 BRDA:10,7,0,0
-BRDA:10,7,1,11
+BRDA:10,7,1,0
 FN:16,System.Void Its.Onix.Core.Utils.LogUtils::LogInformation(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])
-FNDA:11,System.Void Its.Onix.Core.Utils.LogUtils::LogInformation(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])
-DA:17,11
-DA:18,11
-DA:19,11
+FNDA:0,System.Void Its.Onix.Core.Utils.LogUtils::LogInformation(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])
+DA:17,0
+DA:18,0
+DA:19,0
 LF:9
-LH:6
+LH:0
 BRF:2
-BRH:1
+BRH:0
 FNF:2
+FNH:0
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\Serializers\CRoot.cs
+FN:21,Its.Onix.Core.Commons.Table.CTable Its.Onix.Core.Utils.Serializers.CRoot::get_Param()
+FNDA:13,Its.Onix.Core.Commons.Table.CTable Its.Onix.Core.Utils.Serializers.CRoot::get_Param()
+DA:22,13
+DA:23,13
+DA:24,13
+FN:26,System.Void Its.Onix.Core.Utils.Serializers.CRoot::set_Param(Its.Onix.Core.Commons.Table.CTable)
+FNDA:12,System.Void Its.Onix.Core.Utils.Serializers.CRoot::set_Param(Its.Onix.Core.Commons.Table.CTable)
+DA:27,12
+DA:28,12
+DA:29,12
+FN:34,Its.Onix.Core.Commons.Table.CTable Its.Onix.Core.Utils.Serializers.CRoot::get_Data()
+FNDA:12,Its.Onix.Core.Commons.Table.CTable Its.Onix.Core.Utils.Serializers.CRoot::get_Data()
+DA:35,12
+DA:36,12
+DA:37,12
+FN:39,System.Void Its.Onix.Core.Utils.Serializers.CRoot::set_Data(Its.Onix.Core.Commons.Table.CTable)
+FNDA:12,System.Void Its.Onix.Core.Utils.Serializers.CRoot::set_Data(Its.Onix.Core.Commons.Table.CTable)
+DA:40,12
+DA:41,12
+DA:42,12
+FN:9,System.Void Its.Onix.Core.Utils.Serializers.CRoot::.ctor(Its.Onix.Core.Commons.Table.CTable,Its.Onix.Core.Commons.Table.CTable)
+FNDA:13,System.Void Its.Onix.Core.Utils.Serializers.CRoot::.ctor(Its.Onix.Core.Commons.Table.CTable,Its.Onix.Core.Commons.Table.CTable)
+DA:10,13
+DA:11,13
+DA:13,13
+DA:14,13
+DA:15,13
+DA:16,13
+DA:17,13
+LF:19
+LH:19
+BRF:0
+BRH:0
+FNF:5
+FNH:5
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\Serializers\CTableToXml.cs
+FN:18,System.String Its.Onix.Core.Utils.Serializers.CTableToXml::Serialize()
+FNDA:4,System.String Its.Onix.Core.Utils.Serializers.CTableToXml::Serialize()
+DA:19,4
+DA:20,4
+DA:21,4
+DA:22,4
+FN:24,System.Xml.XmlElement Its.Onix.Core.Utils.Serializers.CTableToXml::createElementFromTable(System.Xml.XmlDocument,Its.Onix.Core.Commons.Table.CTable)
+FNDA:12,System.Xml.XmlElement Its.Onix.Core.Utils.Serializers.CTableToXml::createElementFromTable(System.Xml.XmlDocument,Its.Onix.Core.Commons.Table.CTable)
+DA:25,12
+DA:26,12
+DA:27,12
+DA:28,12
+DA:30,68
+DA:31,16
+DA:32,16
+DA:33,16
+DA:34,16
+DA:35,16
+DA:37,16
+DA:38,16
+DA:40,12
+DA:41,40
+DA:42,2
+DA:43,2
+DA:45,2
+DA:46,2
+DA:47,2
+DA:49,14
+DA:50,4
+DA:52,4
+DA:53,4
+DA:54,4
+DA:55,2
+DA:57,12
+DA:58,12
+BRDA:30,130,1,16
+BRDA:30,130,0,12
+BRDA:41,338,1,2
+BRDA:49,304,1,4
+BRDA:49,304,0,2
+BRDA:41,338,0,12
+FN:60,System.String Its.Onix.Core.Utils.Serializers.CTableToXml::createXMLString(Its.Onix.Core.Utils.Serializers.CRoot)
+FNDA:4,System.String Its.Onix.Core.Utils.Serializers.CTableToXml::createXMLString(Its.Onix.Core.Utils.Serializers.CRoot)
+DA:61,4
+DA:62,4
+DA:63,4
+DA:64,4
+DA:65,4
+DA:67,4
+DA:69,4
+DA:70,4
+DA:72,4
+DA:73,4
+DA:75,4
+DA:76,4
+DA:77,4
+FN:10,System.Void Its.Onix.Core.Utils.Serializers.CTableToXml::.ctor(Its.Onix.Core.Utils.Serializers.CRoot)
+FNDA:4,System.Void Its.Onix.Core.Utils.Serializers.CTableToXml::.ctor(Its.Onix.Core.Utils.Serializers.CRoot)
+DA:11,4
+DA:13,4
+DA:14,4
+DA:15,4
+DA:16,4
+LF:49
+LH:49
+BRF:6
+BRH:6
+FNF:4
+FNH:4
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\Serializers\XmlToCTable.cs
+FN:18,Its.Onix.Core.Utils.Serializers.CRoot Its.Onix.Core.Utils.Serializers.XmlToCTable::Deserialize()
+FNDA:13,Its.Onix.Core.Utils.Serializers.CRoot Its.Onix.Core.Utils.Serializers.XmlToCTable::Deserialize()
+DA:19,13
+DA:20,13
+DA:21,13
+DA:22,13
+FN:24,Its.Onix.Core.Utils.Serializers.CRoot Its.Onix.Core.Utils.Serializers.XmlToCTable::XMLToRootObject()
+FNDA:13,Its.Onix.Core.Utils.Serializers.CRoot Its.Onix.Core.Utils.Serializers.XmlToCTable::XMLToRootObject()
+DA:25,13
+DA:26,13
+DA:28,13
+DA:29,13
+DA:30,13
+DA:31,12
+DA:32,12
+DA:33,1
+DA:34,1
+DA:35,1
+DA:36,1
+DA:38,1
+DA:39,1
+DA:41,1
+DA:42,1
+DA:44,13
+DA:45,13
+FN:48,Its.Onix.Core.Commons.Table.CTable Its.Onix.Core.Utils.Serializers.XmlToCTable::populateTableObject(System.Xml.XmlNode)
+FNDA:36,Its.Onix.Core.Commons.Table.CTable Its.Onix.Core.Utils.Serializers.XmlToCTable::populateTableObject(System.Xml.XmlNode)
+DA:49,36
+DA:50,36
+DA:52,216
+DA:53,54
+DA:54,54
+DA:55,48
+DA:56,48
+DA:57,48
+DA:58,6
+DA:59,6
+DA:60,6
+DA:62,6
+DA:63,6
+DA:65,42
+DA:66,12
+DA:68,12
+DA:69,12
+DA:71,12
+DA:72,12
+DA:73,12
+DA:74,12
+DA:75,6
+DA:76,54
+DA:78,36
+DA:79,36
+BRDA:52,305,1,54
+BRDA:54,77,0,48
+BRDA:54,77,1,6
+BRDA:58,140,0,6
+BRDA:65,271,1,12
+BRDA:68,239,0,12
+BRDA:68,239,1,12
+BRDA:65,271,0,6
+BRDA:58,140,1,54
+BRDA:52,305,0,36
+FN:81,Its.Onix.Core.Utils.Serializers.CRoot Its.Onix.Core.Utils.Serializers.XmlToCTable::getRootObject(System.Xml.XmlNode)
+FNDA:12,Its.Onix.Core.Utils.Serializers.CRoot Its.Onix.Core.Utils.Serializers.XmlToCTable::getRootObject(System.Xml.XmlNode)
+DA:82,12
+DA:83,12
+DA:84,12
+DA:85,12
+DA:87,12
+DA:88,84
+DA:89,24
+DA:90,24
+DA:91,12
+DA:92,12
+DA:93,12
+DA:94,12
+DA:95,12
+DA:96,12
+DA:97,12
+DA:99,24
+DA:100,24
+DA:102,12
+DA:103,12
+DA:105,12
+DA:106,12
+BRDA:88,102,1,24
+BRDA:90,54,0,12
+BRDA:90,54,1,12
+BRDA:94,77,0,12
+BRDA:94,77,1,24
+BRDA:88,102,0,12
+FN:12,System.Void Its.Onix.Core.Utils.Serializers.XmlToCTable::.ctor(System.String)
+FNDA:13,System.Void Its.Onix.Core.Utils.Serializers.XmlToCTable::.ctor(System.String)
+DA:13,13
+DA:14,13
+DA:15,13
+DA:16,13
+LF:71
+LH:71
+BRF:16
+BRH:16
+FNF:5
+FNH:5
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Storages\FirebaseStorageContext.cs
+FN:23,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::AuthenToFirebase()
+FNDA:0,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::AuthenToFirebase()
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+FN:50,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::Authenticate(System.String,System.String,System.String,System.String)
+FNDA:0,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::Authenticate(System.String,System.String,System.String,System.String)
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:57,0
+DA:58,0
+FN:60,System.String Its.Onix.Core.Storages.FirebaseStorageContext::UploadFile(System.String,System.String)
+FNDA:0,System.String Its.Onix.Core.Storages.FirebaseStorageContext::UploadFile(System.String,System.String)
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+FN:68,System.String Its.Onix.Core.Storages.FirebaseStorageContext::UploadFile(System.String,System.IO.Stream)
+FNDA:0,System.String Its.Onix.Core.Storages.FirebaseStorageContext::UploadFile(System.String,System.IO.Stream)
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+FN:75,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::DownloadFile(System.String,System.String)
+FNDA:0,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::DownloadFile(System.String,System.String)
+DA:76,0
+DA:78,0
+FN:80,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::SetLogger(Microsoft.Extensions.Logging.ILogger)
+FNDA:1,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::SetLogger(Microsoft.Extensions.Logging.ILogger)
+DA:81,1
+DA:82,1
+DA:83,1
+FN:85,Microsoft.Extensions.Logging.ILogger Its.Onix.Core.Storages.FirebaseStorageContext::GetLogger()
+FNDA:0,Microsoft.Extensions.Logging.ILogger Its.Onix.Core.Storages.FirebaseStorageContext::GetLogger()
+DA:86,0
+DA:87,0
+DA:88,0
+FN:15,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::.ctor()
+FNDA:1,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::.ctor()
+DA:16,1
+DA:18,1
+DA:19,1
+DA:20,1
+DA:21,1
+FN:35,System.Void Its.Onix.Core.Storages.FirebaseStorageContext/<LoginAsync>d__7::MoveNext()
+FNDA:0,System.Void Its.Onix.Core.Storages.FirebaseStorageContext/<LoginAsync>d__7::MoveNext()
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+BRDA:37,61,0,0
+BRDA:37,61,1,0
+FN:41,System.Void Its.Onix.Core.Storages.FirebaseStorageContext/<UploadStorageData>d__8::MoveNext()
+FNDA:0,System.Void Its.Onix.Core.Storages.FirebaseStorageContext/<UploadStorageData>d__8::MoveNext()
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:47,0
+DA:48,0
+BRDA:43,61,0,0
+BRDA:43,61,1,0
+LF:50
+LH:8
+BRF:4
+BRH:0
+FNF:10
 FNH:2
 end_of_record
-SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\NoSQL\FirebaseNoSqlContext.cs
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Smtp\Mail.cs
+FN:6,System.String Its.Onix.Core.Smtp.Mail::get_From()
+FNDA:2,System.String Its.Onix.Core.Smtp.Mail::get_From()
+DA:7,2
+FN:7,System.String Its.Onix.Core.Smtp.Mail::get_To()
+FNDA:2,System.String Its.Onix.Core.Smtp.Mail::get_To()
+DA:8,2
+FN:8,System.String Its.Onix.Core.Smtp.Mail::get_CC()
+FNDA:1,System.String Its.Onix.Core.Smtp.Mail::get_CC()
+DA:9,1
+FN:9,System.String Its.Onix.Core.Smtp.Mail::get_BCC()
+FNDA:1,System.String Its.Onix.Core.Smtp.Mail::get_BCC()
+DA:10,1
+FN:10,System.String Its.Onix.Core.Smtp.Mail::get_Body()
+FNDA:2,System.String Its.Onix.Core.Smtp.Mail::get_Body()
+DA:11,2
+FN:11,System.String Its.Onix.Core.Smtp.Mail::get_Subject()
+FNDA:2,System.String Its.Onix.Core.Smtp.Mail::get_Subject()
+DA:12,2
+FN:12,System.Boolean Its.Onix.Core.Smtp.Mail::get_IsHtmlContent()
+FNDA:1,System.Boolean Its.Onix.Core.Smtp.Mail::get_IsHtmlContent()
+DA:13,1
+LF:7
+LH:7
+BRF:0
+BRH:0
+FNF:7
+FNH:7
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Smtp\SendGridSmtpContext.cs
+FN:6,System.Void Its.Onix.Core.Smtp.SendGridSmtpContext::.ctor()
+FNDA:2,System.Void Its.Onix.Core.Smtp.SendGridSmtpContext::.ctor()
+DA:7,2
+DA:8,2
+DA:9,2
+LF:3
+LH:3
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Smtp\SmtpContextBase.cs
+FN:22,System.Void Its.Onix.Core.Smtp.SmtpContextBase::SetSmtpConfigByEnv(System.String,System.String,System.String,System.String)
+FNDA:1,System.Void Its.Onix.Core.Smtp.SmtpContextBase::SetSmtpConfigByEnv(System.String,System.String,System.String,System.String)
+DA:23,1
+DA:24,1
+DA:25,1
+DA:26,2
+DA:27,1
+DA:29,1
+DA:30,1
+FN:32,System.Void Its.Onix.Core.Smtp.SmtpContextBase::SetSmtpConfig(System.String,System.Int32,System.String,System.String)
+FNDA:1,System.Void Its.Onix.Core.Smtp.SmtpContextBase::SetSmtpConfig(System.String,System.Int32,System.String,System.String)
+DA:33,1
+DA:34,1
+DA:35,1
+DA:36,1
+DA:37,1
+DA:38,1
+FN:40,System.Void Its.Onix.Core.Smtp.SmtpContextBase::Send(Its.Onix.Core.Smtp.Mail)
+FNDA:1,System.Void Its.Onix.Core.Smtp.SmtpContextBase::Send(Its.Onix.Core.Smtp.Mail)
+DA:41,1
+DA:42,1
+DA:43,1
+DA:44,1
+DA:46,1
+DA:47,1
+DA:48,1
+DA:49,1
+DA:50,1
+DA:52,1
+FN:54,System.Void Its.Onix.Core.Smtp.SmtpContextBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
+FNDA:1,System.Void Its.Onix.Core.Smtp.SmtpContextBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
+DA:55,1
+DA:56,1
+DA:57,1
+FN:59,Microsoft.Extensions.Logging.ILogger Its.Onix.Core.Smtp.SmtpContextBase::GetLogger()
+FNDA:0,Microsoft.Extensions.Logging.ILogger Its.Onix.Core.Smtp.SmtpContextBase::GetLogger()
+DA:60,0
+DA:61,0
+DA:62,0
+FN:12,System.Void Its.Onix.Core.Smtp.SmtpContextBase::.ctor()
+FNDA:2,System.Void Its.Onix.Core.Smtp.SmtpContextBase::.ctor()
+DA:13,2
+DA:14,2
+DA:15,2
+DA:16,2
+DA:18,2
+DA:19,2
+DA:20,2
+LF:36
+LH:33
+BRF:0
+BRH:0
+FNF:6
+FNH:5
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\NoSQL\FirebaseNoSqlContext.cs
 FN:46,Firebase.Database.FirebaseClient Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetFirebaseRefresh()
-FNDA:11,Firebase.Database.FirebaseClient Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetFirebaseRefresh()
-DA:47,11
-DA:48,11
-DA:49,11
-DA:51,11
-DA:52,2
-DA:53,2
-DA:54,2
-DA:56,11
-DA:57,11
-BRDA:51,40,0,2
-BRDA:51,40,1,11
+FNDA:0,Firebase.Database.FirebaseClient Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetFirebaseRefresh()
+DA:47,0
+DA:48,0
+DA:49,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:56,0
+DA:57,0
+BRDA:51,40,0,0
+BRDA:51,40,1,0
 FN:132,System.DateTime Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetLastRefreshDtm()
-FNDA:6,System.DateTime Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetLastRefreshDtm()
-DA:133,6
-DA:134,6
-DA:135,6
+FNDA:0,System.DateTime Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetLastRefreshDtm()
+DA:133,0
+DA:134,0
+DA:135,0
 FN:137,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::SetLastRefreshDtm(System.DateTime)
-FNDA:3,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::SetLastRefreshDtm(System.DateTime)
-DA:138,3
-DA:139,3
-DA:140,3
+FNDA:0,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::SetLastRefreshDtm(System.DateTime)
+DA:138,0
+DA:139,0
+DA:140,0
 FN:142,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::SetRefreshInterval(System.Int64)
-FNDA:4,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::SetRefreshInterval(System.Int64)
-DA:143,4
-DA:144,4
-DA:145,4
+FNDA:0,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::SetRefreshInterval(System.Int64)
+DA:143,0
+DA:144,0
+DA:145,0
 FN:147,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
-FNDA:10,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
-DA:148,10
-DA:149,10
-DA:150,10
-DA:151,10
-DA:152,10
-DA:154,10
-DA:155,9
+FNDA:1,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
+DA:148,1
+DA:149,1
+DA:150,1
+DA:151,1
+DA:152,1
+DA:154,1
+DA:155,0
 FN:157,System.String Its.Onix.Core.NoSQL.FirebaseNoSqlContext::PostData(System.String,System.Object)
-FNDA:7,System.String Its.Onix.Core.NoSQL.FirebaseNoSqlContext::PostData(System.String,System.Object)
-DA:158,7
-DA:159,7
-DA:160,6
-DA:161,6
+FNDA:0,System.String Its.Onix.Core.NoSQL.FirebaseNoSqlContext::PostData(System.String,System.Object)
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
 FN:163,System.Object Its.Onix.Core.NoSQL.FirebaseNoSqlContext::PutData(System.String,System.String,System.Object)
-FNDA:1,System.Object Its.Onix.Core.NoSQL.FirebaseNoSqlContext::PutData(System.String,System.String,System.Object)
-DA:164,1
-DA:165,1
-DA:166,1
-DA:167,1
-FN:169,System.Int32 Its.Onix.Core.NoSQL.FirebaseNoSqlContext::DeleteData(System.String,Its.Onix.Core.Commons.BaseModel)
-FNDA:0,System.Int32 Its.Onix.Core.NoSQL.FirebaseNoSqlContext::DeleteData(System.String,Its.Onix.Core.Commons.BaseModel)
+FNDA:0,System.Object Its.Onix.Core.NoSQL.FirebaseNoSqlContext::PutData(System.String,System.String,System.Object)
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+FN:169,System.Int32 Its.Onix.Core.NoSQL.FirebaseNoSqlContext::DeleteData(System.String,Its.Onix.Core.Commons.Model.BaseModel)
+FNDA:0,System.Int32 Its.Onix.Core.NoSQL.FirebaseNoSqlContext::DeleteData(System.String,Its.Onix.Core.Commons.Model.BaseModel)
 DA:170,0
 DA:171,0
 DA:172,0
@@ -84,75 +477,75 @@ DA:177,0
 DA:178,0
 DA:179,0
 FN:181,T Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetSingleObject(System.String,System.String)
-FNDA:1,T Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetSingleObject(System.String,System.String)
-DA:182,1
-DA:183,1
-DA:184,1
-DA:185,1
+FNDA:0,T Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetSingleObject(System.String,System.String)
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
 FN:187,System.Collections.Generic.IEnumerable`1<T> Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetObjectList(System.String)
-FNDA:2,System.Collections.Generic.IEnumerable`1<T> Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetObjectList(System.String)
-DA:188,2
-DA:189,2
-DA:190,2
-DA:191,2
+FNDA:0,System.Collections.Generic.IEnumerable`1<T> Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetObjectList(System.String)
+DA:188,0
+DA:189,0
+DA:190,0
+DA:191,0
 FN:193,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::SetLogger(Microsoft.Extensions.Logging.ILogger)
-FNDA:3,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::SetLogger(Microsoft.Extensions.Logging.ILogger)
-DA:194,3
-DA:195,3
-DA:196,3
+FNDA:1,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::SetLogger(Microsoft.Extensions.Logging.ILogger)
+DA:194,1
+DA:195,1
+DA:196,1
 FN:198,Microsoft.Extensions.Logging.ILogger Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetLogger()
-FNDA:3,Microsoft.Extensions.Logging.ILogger Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetLogger()
-DA:199,3
-DA:200,3
-DA:201,3
+FNDA:0,Microsoft.Extensions.Logging.ILogger Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetLogger()
+DA:199,0
+DA:200,0
+DA:201,0
 FN:18,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::.ctor()
-FNDA:11,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::.ctor()
-DA:19,11
-DA:20,11
-DA:22,11
-DA:23,11
-DA:24,11
-DA:25,11
-DA:26,11
+FNDA:2,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::.ctor()
+DA:19,2
+DA:20,2
+DA:22,2
+DA:23,2
+DA:24,2
+DA:25,2
+DA:26,2
 FN:36,System.Threading.Tasks.Task`1<System.String> Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<>c__DisplayClass8_0::<AuthenToFirebase>b__0()
-FNDA:21,System.Threading.Tasks.Task`1<System.String> Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<>c__DisplayClass8_0::<AuthenToFirebase>b__0()
-DA:37,21
+FNDA:0,System.Threading.Tasks.Task`1<System.String> Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<>c__DisplayClass8_0::<AuthenToFirebase>b__0()
+DA:37,0
 FN:28,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<AuthenToFirebase>d__8::MoveNext()
-FNDA:12,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<AuthenToFirebase>d__8::MoveNext()
-DA:29,12
-DA:30,12
-DA:31,12
-DA:33,11
-DA:34,11
-DA:35,11
-DA:36,11
-DA:38,11
-DA:40,11
-DA:41,11
-DA:43,11
-DA:44,11
-BRDA:31,99,0,12
-BRDA:31,99,1,12
+FNDA:1,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<AuthenToFirebase>d__8::MoveNext()
+DA:29,1
+DA:30,1
+DA:31,1
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:38,0
+DA:40,0
+DA:41,0
+DA:43,0
+DA:44,0
+BRDA:31,99,0,1
+BRDA:31,99,1,1
 FN:59,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<PostFirebaseData>d__10::MoveNext()
-FNDA:7,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<PostFirebaseData>d__10::MoveNext()
-DA:60,7
-DA:61,7
-DA:62,7
-DA:63,7
-DA:65,6
-DA:66,6
-BRDA:61,62,0,6
-BRDA:61,62,1,6
+FNDA:0,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<PostFirebaseData>d__10::MoveNext()
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:65,0
+DA:66,0
+BRDA:61,62,0,0
+BRDA:61,62,1,0
 FN:68,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<PutFirebaseData>d__11::MoveNext()
-FNDA:1,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<PutFirebaseData>d__11::MoveNext()
-DA:69,1
-DA:70,1
-DA:71,1
-DA:72,1
-DA:73,1
-DA:74,1
-BRDA:70,72,0,1
-BRDA:70,72,1,1
+FNDA:0,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<PutFirebaseData>d__11::MoveNext()
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+BRDA:70,72,0,0
+BRDA:70,72,1,0
 FN:76,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<DeleteFirebaseData>d__12::MoveNext()
 FNDA:0,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<DeleteFirebaseData>d__12::MoveNext()
 DA:77,0
@@ -186,109 +579,375 @@ BRDA:86,75,1,0
 BRDA:93,296,1,0
 BRDA:93,296,0,0
 FN:102,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<GetFirebaseSingleData>d__14`1::MoveNext()
-FNDA:1,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<GetFirebaseSingleData>d__14`1::MoveNext()
-DA:103,1
-DA:104,1
-DA:105,1
-DA:106,1
-DA:107,1
-DA:109,1
-DA:110,1
-BRDA:103,8,0,1
-BRDA:104,75,0,1
-BRDA:103,8,1,1
-BRDA:104,75,1,1
+FNDA:0,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<GetFirebaseSingleData>d__14`1::MoveNext()
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:109,0
+DA:110,0
+BRDA:103,8,0,0
+BRDA:104,75,0,0
+BRDA:103,8,1,0
+BRDA:104,75,1,0
 FN:112,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<ListFirebaseData>d__15`1::MoveNext()
-FNDA:2,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<ListFirebaseData>d__15`1::MoveNext()
-DA:113,2
-DA:114,2
-DA:116,2
-DA:117,2
-DA:118,2
-DA:119,2
-DA:121,78
-DA:122,36
-DA:123,36
-DA:124,36
-DA:126,36
-DA:127,36
-DA:129,2
-DA:130,2
-BRDA:113,8,0,2
-BRDA:116,80,0,2
-BRDA:113,8,1,2
-BRDA:116,80,1,2
-BRDA:121,319,1,36
-BRDA:121,319,0,2
+FNDA:0,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<ListFirebaseData>d__15`1::MoveNext()
+DA:113,0
+DA:114,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:126,0
+DA:127,0
+DA:129,0
+DA:130,0
+BRDA:113,8,0,0
+BRDA:116,80,0,0
+BRDA:113,8,1,0
+BRDA:116,80,1,0
+BRDA:121,319,1,0
+BRDA:121,319,0,0
 LF:128
-LH:100
+LH:19
 BRF:26
-BRH:18
+BRH:2
 FNF:22
-FNH:18
+FNH:4
 end_of_record
-SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryNoSQLContext.cs
-FN:15,System.Void Its.Onix.Core.Factories.FactoryNoSQLContext::addClassConfig(System.String,System.String)
-FNDA:0,System.Void Its.Onix.Core.Factories.FactoryNoSQLContext::addClassConfig(System.String,System.String)
-DA:16,0
-DA:17,0
-DA:18,0
-FN:25,System.Void Its.Onix.Core.Factories.FactoryNoSQLContext::initClassMap()
-FNDA:0,System.Void Its.Onix.Core.Factories.FactoryNoSQLContext::initClassMap()
-DA:26,0
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryNoSqlContext.cs
+FN:15,System.Void Its.Onix.Core.Factories.FactoryNoSqlContext::addClassConfig(System.String,System.String)
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryNoSqlContext::addClassConfig(System.String,System.String)
+DA:16,1
+DA:17,1
+DA:18,1
+FN:25,System.Void Its.Onix.Core.Factories.FactoryNoSqlContext::initClassMap()
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryNoSqlContext::initClassMap()
+DA:26,1
+DA:27,1
+DA:28,1
+FN:30,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.FactoryNoSqlContext::CreateNoSqlObject(System.String)
+FNDA:2,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.FactoryNoSqlContext::CreateNoSqlObject(System.String)
+DA:31,2
+DA:32,2
+DA:33,2
+DA:34,1
+DA:35,1
+DA:38,1
+DA:39,1
+DA:41,1
+DA:42,1
+DA:43,1
+DA:44,1
+DA:45,1
+DA:46,1
+DA:48,1
+DA:49,1
+BRDA:33,24,0,1
+BRDA:33,24,1,1
+BRDA:41,75,0,1
+BRDA:41,75,1,1
+FN:51,System.Void Its.Onix.Core.Factories.FactoryNoSqlContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryNoSqlContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+DA:52,1
+DA:53,1
+DA:54,1
+FN:11,System.Void Its.Onix.Core.Factories.FactoryNoSqlContext::.cctor()
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryNoSqlContext::.cctor()
+DA:12,1
+DA:13,1
+DA:21,1
+DA:22,1
+DA:23,1
+LF:29
+LH:29
+BRF:4
+BRH:4
+FNF:5
+FNH:5
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactorySmtpContext.cs
+FN:15,System.Void Its.Onix.Core.Factories.FactorySmtpContext::addClassConfig(System.String,System.String)
+FNDA:1,System.Void Its.Onix.Core.Factories.FactorySmtpContext::addClassConfig(System.String,System.String)
+DA:16,1
+DA:17,1
+DA:18,1
+FN:25,System.Void Its.Onix.Core.Factories.FactorySmtpContext::initClassMap()
+FNDA:1,System.Void Its.Onix.Core.Factories.FactorySmtpContext::initClassMap()
+DA:26,1
+DA:27,1
+DA:28,1
+FN:30,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.FactorySmtpContext::CreateSmtpObject(System.String)
+FNDA:2,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.FactorySmtpContext::CreateSmtpObject(System.String)
+DA:31,2
+DA:32,2
+DA:33,2
+DA:34,1
+DA:35,1
+DA:38,1
+DA:39,1
+DA:41,1
+DA:42,1
+DA:43,1
+DA:44,1
+DA:45,1
+DA:46,1
+DA:48,1
+DA:49,1
+BRDA:33,24,0,1
+BRDA:33,24,1,1
+BRDA:41,75,0,1
+BRDA:41,75,1,1
+FN:51,System.Void Its.Onix.Core.Factories.FactorySmtpContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+FNDA:1,System.Void Its.Onix.Core.Factories.FactorySmtpContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+DA:52,1
+DA:53,1
+DA:54,1
+FN:11,System.Void Its.Onix.Core.Factories.FactorySmtpContext::.cctor()
+FNDA:1,System.Void Its.Onix.Core.Factories.FactorySmtpContext::.cctor()
+DA:12,1
+DA:13,1
+DA:21,1
+DA:22,1
+DA:23,1
+LF:29
+LH:29
+BRF:4
+BRH:4
+FNF:5
+FNH:5
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryStorageContext.cs
+FN:15,System.Void Its.Onix.Core.Factories.FactoryStorageContext::addClassConfig(System.String,System.String)
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryStorageContext::addClassConfig(System.String,System.String)
+DA:16,1
+DA:17,1
+DA:18,1
+FN:25,System.Void Its.Onix.Core.Factories.FactoryStorageContext::initClassMap()
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryStorageContext::initClassMap()
+DA:26,1
+DA:27,1
+DA:28,1
+FN:30,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.FactoryStorageContext::CreateStorageObject(System.String)
+FNDA:2,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.FactoryStorageContext::CreateStorageObject(System.String)
+DA:31,2
+DA:32,2
+DA:33,2
+DA:34,1
+DA:35,1
+DA:38,1
+DA:39,1
+DA:41,1
+DA:42,1
+DA:43,1
+DA:44,1
+DA:45,1
+DA:46,1
+DA:48,1
+DA:49,1
+BRDA:33,24,0,1
+BRDA:33,24,1,1
+BRDA:41,75,0,1
+BRDA:41,75,1,1
+FN:51,System.Void Its.Onix.Core.Factories.FactoryStorageContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryStorageContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+DA:52,1
+DA:53,1
+DA:54,1
+FN:11,System.Void Its.Onix.Core.Factories.FactoryStorageContext::.cctor()
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryStorageContext::.cctor()
+DA:12,1
+DA:13,1
+DA:21,1
+DA:22,1
+DA:23,1
+LF:29
+LH:29
+BRF:4
+BRH:4
+FNF:5
+FNH:5
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Table\CField.cs
+FN:16,System.String Its.Onix.Core.Commons.Table.CField::GetValue()
+FNDA:33,System.String Its.Onix.Core.Commons.Table.CField::GetValue()
+DA:17,33
+DA:18,33
+DA:19,33
+FN:21,System.String Its.Onix.Core.Commons.Table.CField::GetName()
+FNDA:16,System.String Its.Onix.Core.Commons.Table.CField::GetName()
+DA:22,16
+DA:23,16
+DA:24,16
+FN:26,System.Void Its.Onix.Core.Commons.Table.CField::SetValue(System.String)
+FNDA:0,System.Void Its.Onix.Core.Commons.Table.CField::SetValue(System.String)
 DA:27,0
 DA:28,0
-FN:30,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.FactoryNoSQLContext::CreateNoSQLObject(System.String)
-FNDA:0,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.FactoryNoSQLContext::CreateNoSQLObject(System.String)
+DA:29,0
+FN:9,System.Void Its.Onix.Core.Commons.Table.CField::.ctor(System.String,System.String,System.String)
+FNDA:50,System.Void Its.Onix.Core.Commons.Table.CField::.ctor(System.String,System.String,System.String)
+DA:10,50
+DA:11,50
+DA:12,50
+DA:13,50
+DA:14,50
+LF:14
+LH:11
+BRF:0
+BRH:0
+FNF:4
+FNH:3
+end_of_record
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Table\CTable.cs
+FN:23,System.Void Its.Onix.Core.Commons.Table.CTable::AddChildArray(System.String,System.Collections.ArrayList)
+FNDA:6,System.Void Its.Onix.Core.Commons.Table.CTable::AddChildArray(System.String,System.Collections.ArrayList)
+DA:24,6
+DA:25,6
+DA:26,6
+FN:28,System.Void Its.Onix.Core.Commons.Table.CTable::RemoveChildArray(System.String)
+FNDA:0,System.Void Its.Onix.Core.Commons.Table.CTable::RemoveChildArray(System.String)
+DA:29,0
+DA:30,0
 DA:31,0
 DA:32,0
 DA:33,0
 DA:34,0
-DA:35,0
-DA:38,0
-DA:39,0
-DA:41,0
-DA:42,0
-DA:43,0
-DA:44,0
-DA:45,0
-DA:46,0
-DA:48,0
-DA:49,0
-BRDA:33,24,0,0
-BRDA:33,24,1,0
-BRDA:41,75,0,0
-BRDA:41,75,1,0
-FN:51,System.Void Its.Onix.Core.Factories.FactoryNoSQLContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
-FNDA:0,System.Void Its.Onix.Core.Factories.FactoryNoSQLContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
-DA:52,0
-DA:53,0
-DA:54,0
-FN:11,System.Void Its.Onix.Core.Factories.FactoryNoSQLContext::.cctor()
-FNDA:0,System.Void Its.Onix.Core.Factories.FactoryNoSQLContext::.cctor()
-DA:12,0
-DA:13,0
+BRDA:30,15,0,0
+BRDA:30,15,1,0
+FN:36,System.Collections.ArrayList Its.Onix.Core.Commons.Table.CTable::GetChildArray(System.String)
+FNDA:4,System.Collections.ArrayList Its.Onix.Core.Commons.Table.CTable::GetChildArray(System.String)
+DA:37,4
+DA:38,4
+DA:39,4
+FN:41,System.Collections.Hashtable Its.Onix.Core.Commons.Table.CTable::GetChildHash()
+FNDA:12,System.Collections.Hashtable Its.Onix.Core.Commons.Table.CTable::GetChildHash()
+DA:42,12
+DA:43,12
+DA:44,12
+FN:46,System.Void Its.Onix.Core.Commons.Table.CTable::AddField(System.String,System.String,System.String)
+FNDA:50,System.Void Its.Onix.Core.Commons.Table.CTable::AddField(System.String,System.String,System.String)
+DA:47,50
+DA:48,50
+DA:49,50
+DA:50,50
+DA:51,50
+FN:53,System.Void Its.Onix.Core.Commons.Table.CTable::SetFieldValue(System.String,System.String)
+FNDA:50,System.Void Its.Onix.Core.Commons.Table.CTable::SetFieldValue(System.String,System.String)
+DA:54,50
+DA:55,50
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:61,50
+DA:62,50
+DA:63,50
+DA:64,50
+BRDA:55,15,0,0
+BRDA:55,15,1,50
+FN:66,System.Void Its.Onix.Core.Commons.Table.CTable::SetFieldValue(System.String,System.Int32)
+FNDA:0,System.Void Its.Onix.Core.Commons.Table.CTable::SetFieldValue(System.String,System.Int32)
+DA:67,0
+DA:68,0
+DA:69,0
+FN:71,System.Void Its.Onix.Core.Commons.Table.CTable::SetFieldValue(System.String,System.Double)
+FNDA:0,System.Void Its.Onix.Core.Commons.Table.CTable::SetFieldValue(System.String,System.Double)
+DA:72,0
+DA:73,0
+DA:74,0
+FN:76,System.String Its.Onix.Core.Commons.Table.CTable::GetFieldValue(System.String)
+FNDA:17,System.String Its.Onix.Core.Commons.Table.CTable::GetFieldValue(System.String)
+DA:77,17
+DA:78,17
+DA:79,17
+DA:80,17
+DA:81,17
+DA:84,0
+DA:85,17
+BRDA:78,15,0,17
+BRDA:78,15,1,0
+FN:87,System.Int32 Its.Onix.Core.Commons.Table.CTable::GetFieldValueInt(System.String)
+FNDA:0,System.Int32 Its.Onix.Core.Commons.Table.CTable::GetFieldValueInt(System.String)
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+FN:93,System.String Its.Onix.Core.Commons.Table.CTable::GetTableName()
+FNDA:12,System.String Its.Onix.Core.Commons.Table.CTable::GetTableName()
+DA:94,12
+DA:95,12
+DA:96,12
+FN:98,System.Collections.ArrayList Its.Onix.Core.Commons.Table.CTable::GetTableFields()
+FNDA:12,System.Collections.ArrayList Its.Onix.Core.Commons.Table.CTable::GetTableFields()
+DA:99,12
+DA:100,12
+DA:101,12
+FN:103,Its.Onix.Core.Commons.Table.CTable Its.Onix.Core.Commons.Table.CTable::CloneAll()
+FNDA:0,Its.Onix.Core.Commons.Table.CTable Its.Onix.Core.Commons.Table.CTable::CloneAll()
+DA:104,0
+DA:105,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:117,0
+DA:118,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:127,0
+DA:128,0
+BRDA:107,72,1,0
+BRDA:107,72,0,0
+BRDA:113,259,1,0
+BRDA:120,225,1,0
+BRDA:120,225,0,0
+BRDA:113,259,0,0
+FN:7,System.Void Its.Onix.Core.Commons.Table.CTable::.ctor(System.String)
+FNDA:38,System.Void Its.Onix.Core.Commons.Table.CTable::.ctor(System.String)
+DA:8,38
+DA:9,38
+DA:11,38
+DA:12,38
+DA:14,38
+DA:15,38
+DA:16,38
+DA:17,38
+FN:18,System.Void Its.Onix.Core.Commons.Table.CTable::.ctor()
+FNDA:0,System.Void Its.Onix.Core.Commons.Table.CTable::.ctor()
+DA:19,0
+DA:20,0
 DA:21,0
-DA:22,0
-DA:23,0
-LF:29
-LH:0
-BRF:4
-BRH:0
-FNF:5
-FNH:0
+LF:84
+LH:40
+BRF:12
+BRH:2
+FNF:15
+FNH:9
 end_of_record
-SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\BaseModel.cs
-FN:6,System.String Its.Onix.Core.Commons.BaseModel::get_Key()
-FNDA:36,System.String Its.Onix.Core.Commons.BaseModel::get_Key()
-DA:7,36
-FN:7,System.DateTime Its.Onix.Core.Commons.BaseModel::get_LastMaintDate()
-FNDA:36,System.DateTime Its.Onix.Core.Commons.BaseModel::get_LastMaintDate()
-DA:8,36
+SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Model\BaseModel.cs
+FN:6,System.String Its.Onix.Core.Commons.Model.BaseModel::get_Key()
+FNDA:0,System.String Its.Onix.Core.Commons.Model.BaseModel::get_Key()
+DA:7,0
+FN:7,System.DateTime Its.Onix.Core.Commons.Model.BaseModel::get_LastMaintDate()
+FNDA:0,System.DateTime Its.Onix.Core.Commons.Model.BaseModel::get_LastMaintDate()
+DA:8,0
 LF:2
-LH:2
+LH:0
 BRF:0
 BRH:0
 FNF:2
-FNH:2
+FNH:0
 end_of_record

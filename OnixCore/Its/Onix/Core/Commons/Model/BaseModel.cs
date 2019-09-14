@@ -1,6 +1,6 @@
 using System;
 
-namespace Its.Onix.Core.Commons
+namespace Its.Onix.Core.Commons.Model
 {
 	public class BaseModel
 	{
