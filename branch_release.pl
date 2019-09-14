@@ -154,15 +154,13 @@ sub parse_pom
         my $line = $_;
         my $new_line = $line;
 
-        if (($line =~ /^\s*_DOCKER_VERSION\s*:\s*"(.+)"\s*$/) && (!$found_version))
+        if (($line =~ /(\$\{SHORT_SHA\})/))
         { 
-            #Replace only first occurence            
+            my $old_version = '\$\{SHORT_SHA\}';
+            my $new_value = '';
+            $new_line =~ s/$old_version/$new_value/ig;
 
-            my $old_version = $1;
-            $new_line =~ s/$old_version/$version/ig;
-
-            print("Replaced [$old_version] with [$version]\n");
-            $found_version = true;
+            print("Replaced [$old_version] with [$new_value]\n");
         }
         elsif (($line =~ /^\s*_VERSION\s*:\s*"(.+)"\s*$/) && (!$found_docker_version))
         { 
