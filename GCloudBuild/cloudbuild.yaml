@@ -21,7 +21,12 @@ steps:
     
 - name: 'microsoft/dotnet:2.2-sdk' 
   entrypoint: 'dotnet'
-  args: ['build', 'OnixCore.sln', '-c', 'Release', '-p:Version=${_VERSION}$(cat _TAG)']
+  args:
+    - build
+    - | 
+      OnixCore.sln
+      -c Release -p:Version=${_VERSION}$(cat _TAG)
+#    ['build', 'OnixCore.sln', '-c', 'Release', '-p:Version=${_VERSION}$(cat _TAG)']
 
 - name: 'microsoft/dotnet:2.2-sdk'
   entrypoint: 'dotnet'
