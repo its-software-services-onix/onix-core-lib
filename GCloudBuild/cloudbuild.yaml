@@ -1,6 +1,6 @@
 substitutions:
   _VERSION: "0.0.909"
-  _NUGET_VERSION: "latest"
+  _NUGET_VERSION: "0.0.999"
   _NUGET_API: "https://api.nuget.org/v3/index.json"
   _NUGET_PUSH_KEY: "oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u"
   _PACKAGE_PATH: "/workspace/OnixCore/bin/Debug/OnixCore"
@@ -21,5 +21,5 @@ steps:
 
 - name: 'microsoft/dotnet:2.2-sdk'
   entrypoint: 'dotnet'
-  args: ['nuget', 'push', '${_PACKAGE_PATH}.${_NUGET_VERSION}.nupkg', '-k', '${_NUGET_PUSH_KEY}', '-s', '${_NUGET_API}']
+  args: ['nuget', 'push', '${_PACKAGE_PATH}.${_VERSION}.nupkg', '-k', '${_NUGET_PUSH_KEY}', '-s', '${_NUGET_API}']
 
