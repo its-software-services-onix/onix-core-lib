@@ -3,12 +3,13 @@ substitutions:
   _NUGET_API: "https://api.nuget.org/v3/index.json"
   _NUGET_PUSH_KEY: "oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u"
   _PACKAGE_PATH: "/workspace/OnixCore/bin/Release/OnixCore"
-  _TAG_COMMAND: 'date -u +%Y%m%dT%H%M'
+  _TAG_COMMAND: "date -u +%Y%m%dT%H%M"
+
+steps:
 
 - name: 'ubuntu'
   args: ['bash', '-c', '${_TAG_COMMAND} > _TAG']
 
-steps:
 - name: 'gcr.io/its-artifact-commons/dotnet-sonar:2.2-4'
   entrypoint: 'bash'
   args: ['/workspace/GCloudBuild/sonar.bash']
