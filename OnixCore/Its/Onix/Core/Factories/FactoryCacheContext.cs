@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections;
 using System.Reflection;
 
@@ -43,7 +44,7 @@ namespace Its.Onix.Core.Factories
                 className = tokens[1];
 
                 Assembly asm = Assembly.LoadFrom(assemblyName);                    
-
+                
                 cacheObj = (ICacheContext)asm.CreateInstance(className);
                 objectMaps[name] = cacheObj;
 
