@@ -24,7 +24,8 @@ steps:
   args:
     - build
     - OnixCore.sln 
-    - -c Release 
+    - -c
+    - Release 
     - -p:Version=${_VERSION}${SHORT_SHA}
 
 - name: 'microsoft/dotnet:2.2-sdk'
