@@ -1,8 +1,12 @@
 substitutions:
-  _VERSION: "0.0.0"
+  _VERSION: "0.0.0-build."
   _NUGET_API: "https://api.nuget.org/v3/index.json"
   _NUGET_PUSH_KEY: "oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u"
   _PACKAGE_PATH: "/workspace/OnixCore/bin/Release/OnixCore"
+  _TAG_COMMAND: "date -u +%Y%m%dT%H%M"
+
+- name: 'ubuntu'
+  args: ['bash', '-c', '${_TAG_COMMAND} > _TAG']
 
 steps:
 - name: 'gcr.io/its-artifact-commons/dotnet-sonar:2.2-4'
@@ -16,9 +20,9 @@ steps:
     
 - name: 'microsoft/dotnet:2.2-sdk' 
   entrypoint: 'dotnet'
-  args: ['build', 'OnixCore.sln', '-c', 'Release', '-p:Version=${_VERSION}-${COMMIT_SHA}']
+  args: ['build', 'OnixCore.sln', '-c', 'Release', '-p:Version=${_VERSION}$(cat _TAG)']
 
 - name: 'microsoft/dotnet:2.2-sdk'
   entrypoint: 'dotnet'
-  args: ['nuget', 'push', '${_PACKAGE_PATH}.${_VERSION}-${COMMIT_SHA}.nupkg', '-k', '${_NUGET_PUSH_KEY}', '-s', '${_NUGET_API}']
+  args: ['nuget', 'push', '${_PACKAGE_PATH}.${_VERSION}$(cat _TAG).nupkg', '-k', '${_NUGET_PUSH_KEY}', '-s', '${_NUGET_API}']
 
