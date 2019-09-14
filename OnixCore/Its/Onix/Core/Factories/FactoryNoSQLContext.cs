@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Its.Onix.Core.Factories
 {
-    public static class FactoryNoSQLContext
+    public static class FactoryNoSqlContext
     {
         private static ILoggerFactory loggerFactory = null;
         private static Hashtable classMaps = new Hashtable();
@@ -17,7 +17,7 @@ namespace Its.Onix.Core.Factories
             classMaps.Add(apiName, fqdn);
         }
 
-        static FactoryNoSQLContext()
+        static FactoryNoSqlContext()
         {
             initClassMap();
         }
