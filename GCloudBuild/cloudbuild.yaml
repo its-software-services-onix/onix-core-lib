@@ -15,7 +15,7 @@ steps:
     - 'BRANCH_NAME=${BRANCH_NAME}'
     - 'COMMIT_SHA=${COMMIT_SHA}'
     
-- name: 'microsoft/dotnet:2.2-sdk'
+- name: 'microsoft/dotnet:2.2-sdk' 
   entrypoint: 'dotnet'
   args: ['build', 'OnixCore.sln', '-p:Version=${_VERSION}']
 
