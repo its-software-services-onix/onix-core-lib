@@ -9,6 +9,8 @@ namespace Its.Onix.Core.Factories
 {
     public static class FactoryNoSqlContext
     {
+        private int i = 0;
+
         private static ILoggerFactory loggerFactory = null;
         private static Hashtable classMaps = new Hashtable();
 
