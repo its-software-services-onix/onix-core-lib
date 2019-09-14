@@ -23,7 +23,7 @@ namespace Its.Onix.Core.Smtp
         {
             smtpHost = Environment.GetEnvironmentVariable(envHost);
             smtpPort = Int32.Parse(Environment.GetEnvironmentVariable(envPort));
-            smtpUser = Environment.GetEnvironmentVariable(envUser);;
+            smtpUser = Environment.GetEnvironmentVariable(envUser);
             smtpPassword = Environment.GetEnvironmentVariable(envPassword);
 
             SetSmtpConfig(smtpHost, smtpPort, smtpUser, smtpPassword);
