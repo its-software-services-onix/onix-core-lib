@@ -21,7 +21,6 @@ dotnet sonarscanner begin \
     /d:sonar.javascript.exclusions=**/bootstrap/**,**/jquery/**,**/jquery-validation/**,**/jquery-validation-unobtrusive/** \
     /d:sonar.verbose=true \
     /d:sonar.scm.provider=git \
-    /d:sonar.projectVersion=${BASELINE_VERSION} \
     /d:sonar.login=${SONAR_KEY}
 
 dotnet build OnixCore.sln
