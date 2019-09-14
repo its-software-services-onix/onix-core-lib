@@ -2,12 +2,12 @@ using System;
 using System.Collections;
 using System.Reflection;
 
-using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Smtp;
 using Microsoft.Extensions.Logging;
 
 namespace Its.Onix.Core.Factories
 {
-    public static class FactoryNoSqlContext
+    public static class FactorySmtpContext
     {
         private static ILoggerFactory loggerFactory = null;
         private static Hashtable classMaps = new Hashtable();
@@ -17,17 +17,17 @@ namespace Its.Onix.Core.Factories
             classMaps.Add(apiName, fqdn);
         }
 
-        static FactoryNoSqlContext()
+        static FactorySmtpContext()
         {
             initClassMap();
         }
 
         private static void initClassMap()
         {
-            addClassConfig("FirebaseNoSqlContext", "Its.Onix.Core.NoSQL.FirebaseNoSqlContext");
+            addClassConfig("SendGridSmtpContext", "Its.Onix.Core.Smtp.SendGridSmtpContext");
         }
 
-        public static INoSqlContext CreateNoSqlObject(string name)
+        public static ISmtpContext CreateSmtpObject(string name)
         {
             string className = (string)classMaps[name];
             if (className == null)
@@ -36,7 +36,7 @@ namespace Its.Onix.Core.Factories
             }
 
             Assembly asm = Assembly.GetExecutingAssembly();
-            INoSqlContext obj = (INoSqlContext)asm.CreateInstance(className);            
+            ISmtpContext obj = (ISmtpContext)asm.CreateInstance(className);            
 
             if (loggerFactory != null)
             {

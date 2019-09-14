@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Firebase.Database;
 using Firebase.Database.Query;
 using Firebase.Auth;
-using Its.Onix.Core.Commons;
+using Its.Onix.Core.Commons.Model;
 using Its.Onix.Core.Utils;
 
 namespace Its.Onix.Core.NoSQL
