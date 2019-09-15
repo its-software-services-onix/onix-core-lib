@@ -56,6 +56,14 @@ namespace Its.Onix.Core.Business
         public ILogger GetLogger()
         {
             return appLogger;
-        }         
+        }    
+
+        public void CopyContexts(BusinessOperationBase source)
+        {
+            SetLogger(source.GetLogger());
+            SetNoSqlContext(source.GetNoSqlContext());
+            SetSmtpContext(source.GetSmtpContext());
+            SetStorageContext(source.GetStorageContext());
+        }     
     }
 }
