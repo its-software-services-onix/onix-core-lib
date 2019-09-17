@@ -16,7 +16,6 @@ namespace Its.Onix.Core.Factories
 
         private static ILoggerFactory loggerFactory = null;
         private static Hashtable classMaps = new Hashtable();
-        //private static Hashtable objectMaps = new Hashtable();
 
         private static Dictionary<string, Dictionary<string, ICacheContext>> cacheProfileMaps = new Dictionary<string, Dictionary<string, ICacheContext>>();
 
