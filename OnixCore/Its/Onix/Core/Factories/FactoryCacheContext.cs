@@ -24,6 +24,14 @@ namespace Its.Onix.Core.Factories
         {
             classMaps.Add(name, fqdn);
         }
+        
+        public static void RegisterCaches(Dictionary<string, string> caches)
+        {
+            foreach(KeyValuePair<string, string> cache in caches)
+            {
+                RegisterCache(cache.Key, cache.Value);
+            }            
+        }        
 
         static FactoryCacheContext()
         {
