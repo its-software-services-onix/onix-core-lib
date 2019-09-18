@@ -57,8 +57,7 @@ namespace Its.Onix.Core.Factories
             }
 
             PluginEntry entry = classMaps[name];
-            string className = entry.Fqdn;
-
+            
             Dictionary<string, ICacheContext> cacheMaps = null;
             if (!cacheProfileMaps.ContainsKey(profile))
             {
