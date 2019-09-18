@@ -1,10 +1,10 @@
 using System;
 using System.IO;
-using System.Collections;
-using System.Reflection;
 using System.Collections.Generic;
+using System.Reflection;
 
 using Its.Onix.Core.Caches;
+using Its.Onix.Core.Commons.Plugin;
 
 using Microsoft.Extensions.Logging;
 
@@ -15,20 +15,22 @@ namespace Its.Onix.Core.Factories
         private static readonly string defaultProfile = "DEFAULT";
 
         private static ILoggerFactory loggerFactory = null;
-        private static Hashtable classMaps = new Hashtable();
+        private static Dictionary<string, PluginEntry> classMaps = new Dictionary<string, PluginEntry>();
 
         private static Dictionary<string, Dictionary<string, ICacheContext>> cacheProfileMaps = new Dictionary<string, Dictionary<string, ICacheContext>>();
 
-        public static void RegisterCache(string name, string fqdn)
+        public static void RegisterCache(Assembly asm, string name, string fqdn)
         {
-            classMaps.Add(name, fqdn);
+            PluginEntry entry = new PluginEntry(asm, name, fqdn);
+            classMaps.Add(name, entry);
         }
         
-        public static void RegisterCaches(Dictionary<string, string> caches)
+        public static void RegisterCaches(Dictionary<string, PluginEntry> caches)
         {
-            foreach(KeyValuePair<string, string> cache in caches)
+            foreach(KeyValuePair<string, PluginEntry> cache in caches)
             {
-                RegisterCache(cache.Key, cache.Value);
+                PluginEntry entry = cache.Value;
+                RegisterCache(entry.Asm, entry.Key, entry.Fqdn);
             }            
         }        
 
@@ -44,11 +46,13 @@ namespace Its.Onix.Core.Factories
 
         public static ICacheContext GetCacheObject(string profile, string name)
         {
-            string className = (string)classMaps[name];
-            if (className == null)
+            if (!classMaps.ContainsKey(name))
             {
                 throw new ArgumentNullException(String.Format("Cache name not found [{0}]", name));
             }
+
+            PluginEntry entry = classMaps[name];
+            string className = entry.Fqdn;
 
             Dictionary<string, ICacheContext> cacheMaps = null;
             if (!cacheProfileMaps.ContainsKey(profile))
@@ -67,14 +71,9 @@ namespace Its.Onix.Core.Factories
                 //Create just only one time and reuse it later
                 //Using lazy approach
 
-                string[] tokens = className.Split(':');
+                Assembly asm = Assembly.Load(entry.Fqdn);                    
                 
-                string assemblyName = tokens[0];
-                className = tokens[1];
-
-                Assembly asm = Assembly.LoadFrom(assemblyName);                    
-                
-                cacheObj = (ICacheContext)asm.CreateInstance(className);
+                cacheObj = (ICacheContext)asm.CreateInstance(entry.Fqdn);
                 cacheMaps.Add(name, cacheObj);
 
                 if (loggerFactory != null)
