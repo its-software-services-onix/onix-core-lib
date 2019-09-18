@@ -32,6 +32,11 @@ namespace Its.Onix.Core.Factories
         {
         }
 
+        public static void ClearRegisteredItems()
+        {
+            classMaps.Clear();
+        }
+        
         public static void RegisterBusinessOperation(Assembly asm, string apiName, string fqdn)
         {
             PluginEntry entry = new PluginEntry(asm, apiName, fqdn);
@@ -153,7 +158,7 @@ namespace Its.Onix.Core.Factories
 
             PluginEntry entry = classMaps[name];         
 
-            Assembly asm = Assembly.Load(entry.Asm);  
+            Assembly asm = Assembly.Load(entry.Asm.GetName());  
             IBusinessOperation obj = (IBusinessOperation)asm.CreateInstance(entry.Fqdn);
             
             ContextGroup grp = GetContextGroup(profile);

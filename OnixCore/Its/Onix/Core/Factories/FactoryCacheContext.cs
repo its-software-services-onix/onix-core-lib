@@ -38,6 +38,11 @@ namespace Its.Onix.Core.Factories
         {
         }
 
+        public static void ClearRegisteredItems()
+        {
+            classMaps.Clear();
+        }
+
         public static ICacheContext GetCacheObject(string name)
         {
             ICacheContext ctx = GetCacheObject(defaultProfile, name);
@@ -71,7 +76,7 @@ namespace Its.Onix.Core.Factories
                 //Create just only one time and reuse it later
                 //Using lazy approach
 
-                Assembly asm = Assembly.Load(entry.Fqdn);                    
+                Assembly asm = Assembly.Load(entry.Asm.GetName());                    
                 
                 cacheObj = (ICacheContext)asm.CreateInstance(entry.Fqdn);
                 cacheMaps.Add(name, cacheObj);
