@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using System.Collections.Generic;
 using NUnit.Framework;
 using Microsoft.Extensions.Logging;
@@ -8,6 +9,7 @@ using Its.Onix.Core.Business;
 using Its.Onix.Core.NoSQL;
 using Its.Onix.Core.Storages;
 using Its.Onix.Core.Smtp;
+using Its.Onix.Core.Commons.Plugin;
 
 namespace Its.Onix.Core.Factories
 {
@@ -15,13 +17,18 @@ namespace Its.Onix.Core.Factories
     {
         public FactoryBusinessOperationTest()
         {
-            FactoryBusinessOperation.RegisterBusinessOperation("BusinessOperationMocked", "OnixCoreTest.dll:Its.Onix.Core.Business.BusinessOperationMocked");
+            Assembly asm = Assembly.GetExecutingAssembly();
+
+            FactoryBusinessOperation.ClearRegisteredItems();
+
+            FactoryBusinessOperation.RegisterBusinessOperation(asm, "BusinessOperationMocked", "Its.Onix.Core.Business.BusinessOperationMocked");
             FactoryBusinessOperation.SetLoggerFactory(new Mock<ILoggerFactory>().Object);
 
-            Dictionary<string, string> items = new Dictionary<string, string>();
-            items.Add("BusinessOperationMocked_1", "OnixCoreTest.dll:Its.Onix.Core.Business.BusinessOperationMocked");
-            items.Add("BusinessOperationMocked_2", "OnixCoreTest.dll:Its.Onix.Core.Business.BusinessOperationMocked");
-            items.Add("BusinessOperationMocked_3", "OnixCoreTest.dll:Its.Onix.Core.Business.BusinessOperationMocked");
+            Dictionary<string, PluginEntry> items = new Dictionary<string, PluginEntry>();
+            items.Add("BusinessOperationMocked_1", new PluginEntry(asm, "BusinessOperationMocked_1", "Its.Onix.Core.Business.BusinessOperationMocked"));
+            items.Add("BusinessOperationMocked_2", new PluginEntry(asm, "BusinessOperationMocked_2", "Its.Onix.Core.Business.BusinessOperationMocked"));
+            items.Add("BusinessOperationMocked_3", new PluginEntry(asm, "BusinessOperationMocked_3", "Its.Onix.Core.Business.BusinessOperationMocked"));
+            items.Add("BusinessOperationMocked_4", new PluginEntry(asm, "BusinessOperationMocked_4", "Its.Onix.Core.Business.BusinessOperationMocked"));
             FactoryBusinessOperation.RegisterBusinessOperations(items);
         }
 

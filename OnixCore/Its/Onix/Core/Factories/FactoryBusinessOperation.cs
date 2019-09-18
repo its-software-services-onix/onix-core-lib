@@ -7,6 +7,7 @@ using Its.Onix.Core.NoSQL;
 using Its.Onix.Core.Storages;
 using Its.Onix.Core.Smtp;
 using Its.Onix.Core.Business;
+using Its.Onix.Core.Commons.Plugin;
 
 using Microsoft.Extensions.Logging;
 
@@ -24,24 +25,31 @@ namespace Its.Onix.Core.Factories
         private static readonly string defaultProfile = "DEFAULT";
         private static ILoggerFactory loggerFactory = null;
 
-        private static Hashtable classMaps = new Hashtable();
+        private static Dictionary<string, PluginEntry> classMaps = new Dictionary<string, PluginEntry>();
         private static Hashtable contextProfiles = new Hashtable();
 
         static FactoryBusinessOperation()
         {
         }
 
-        public static void RegisterBusinessOperation(string apiName, string fqdn)
+        public static void ClearRegisteredItems()
         {
-            classMaps.Add(apiName, fqdn);
+            classMaps.Clear();
+        }
+        
+        public static void RegisterBusinessOperation(Assembly asm, string apiName, string fqdn)
+        {
+            PluginEntry entry = new PluginEntry(asm, apiName, fqdn);
+            classMaps.Add(apiName, entry);            
         }
 
-        public static void RegisterBusinessOperations(Dictionary<string, string> operations)
+        public static void RegisterBusinessOperations(Dictionary<string, PluginEntry> operations)
         {
-            foreach(KeyValuePair<string, string> operation in operations)
+            foreach(KeyValuePair<string, PluginEntry> operation in operations)
             {
-                RegisterBusinessOperation(operation.Key, operation.Value);
-            }            
+                PluginEntry entry = operation.Value;
+                RegisterBusinessOperation(entry.Asm, entry.Key, entry.Fqdn);
+            }             
         }
 
         private static ContextGroup GetContextGroup(string profile)
@@ -143,19 +151,15 @@ namespace Its.Onix.Core.Factories
 
         public static IBusinessOperation CreateBusinessOperationObject(string profile, string name)
         {        
-            string className = (string)classMaps[name];
-            if (className == null)
+            if (!classMaps.ContainsKey(name))
             {
                 throw new ArgumentNullException(String.Format("Operation not found [{0}]", name));
             }
 
-            string[] tokens = className.Split(':');
-                
-            string assemblyName = tokens[0];
-            className = tokens[1];
+            PluginEntry entry = classMaps[name];         
 
-            Assembly asm = Assembly.LoadFrom(assemblyName);  
-            IBusinessOperation obj = (IBusinessOperation)asm.CreateInstance(className);
+            Assembly asm = Assembly.Load(entry.Asm.GetName());  
+            IBusinessOperation obj = (IBusinessOperation)asm.CreateInstance(entry.Fqdn);
             
             ContextGroup grp = GetContextGroup(profile);
 
