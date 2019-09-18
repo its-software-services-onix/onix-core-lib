@@ -38,17 +38,24 @@ namespace Its.Onix.Core.Smtp
         }
 
         public void Send(Mail mail)
-        {                   
+        {
             SmtpClient client = new SmtpClient(smtpHost, smtpPort);
             client.UseDefaultCredentials = false;
             client.Credentials = new NetworkCredential(smtpUser, smtpPassword);
-            
+
             MailMessage mailMessage = new MailMessage();
-            mailMessage.From = new MailAddress(mail.From);
+            if (mail.FromName == null)
+            {
+                mailMessage.From = new MailAddress(mail.From);
+            }
+            else
+            {
+                mailMessage.From = new MailAddress(mail.From, mail.FromName);
+            }
             mailMessage.To.Add(mail.To);
             mailMessage.Body = mail.Body;
             mailMessage.Subject = mail.Subject;
-            // Will need to add - client dot Send(mailMessage); here
+            client.Send(mailMessage);
         }
 
         public void SetLogger(ILogger logger)
