@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Its.Onix.Core.Factories
 {   
-    class ContextGroup
+    internal class ContextGroup
     {
         public INoSqlContext NoSqlContext {get; set;}
         public IStorageContext StorageContext {get; set;}
@@ -22,7 +22,6 @@ namespace Its.Onix.Core.Factories
 
     public static class FactoryBusinessOperation
     {
-        private static readonly string defaultProfile = "DEFAULT";
         private static ILoggerFactory loggerFactory = null;
 
         private static Dictionary<string, PluginEntry> classMaps = new Dictionary<string, PluginEntry>();
@@ -39,17 +38,12 @@ namespace Its.Onix.Core.Factories
         
         public static void RegisterBusinessOperation(Assembly asm, string apiName, string fqdn)
         {
-            PluginEntry entry = new PluginEntry(asm, apiName, fqdn);
-            classMaps.Add(apiName, entry);            
+            FactoryContextUtils.RegisterItem(classMaps, asm, apiName, fqdn);
         }
 
         public static void RegisterBusinessOperations(Dictionary<string, PluginEntry> operations)
         {
-            foreach(KeyValuePair<string, PluginEntry> operation in operations)
-            {
-                PluginEntry entry = operation.Value;
-                RegisterBusinessOperation(entry.Asm, entry.Key, entry.Fqdn);
-            }             
+            FactoryContextUtils.RegisterItems(classMaps, operations);
         }
 
         private static ContextGroup GetContextGroup(string profile)
@@ -83,13 +77,13 @@ namespace Its.Onix.Core.Factories
 
         public static void SetNoSqlContext(INoSqlContext ctx)
         {
-            ContextGroup grp = GetContextGroup(defaultProfile);
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
             grp.NoSqlContext = ctx;
         }        
 
         public static INoSqlContext GetNoSqlContext()
         {
-            ContextGroup grp = GetContextGroup(defaultProfile);
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
             return grp.NoSqlContext;
         }            
         #endregion NoSQLContext
@@ -110,13 +104,13 @@ namespace Its.Onix.Core.Factories
 
         public static void SetStorageContext(IStorageContext ctx)
         {
-            ContextGroup grp = GetContextGroup(defaultProfile);
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
             grp.StorageContext = ctx;
         }
 
         public static IStorageContext GetStorageContext()
         {
-            ContextGroup grp = GetContextGroup(defaultProfile);
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
             return grp.StorageContext;
         }                
         #endregion StorageContext
@@ -137,13 +131,13 @@ namespace Its.Onix.Core.Factories
 
         public static void SetSmtpContext(ISmtpContext ctx)
         {
-            ContextGroup grp = GetContextGroup(defaultProfile);
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
             grp.SmtpContext = ctx;
         }
 
         public static ISmtpContext GetSmtpContext()
         {
-            ContextGroup grp = GetContextGroup(defaultProfile);
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
             return grp.SmtpContext;
         }           
         #endregion SmtpContext
@@ -179,7 +173,7 @@ namespace Its.Onix.Core.Factories
 
         public static IBusinessOperation CreateBusinessOperationObject(string name)
         {        
-            IBusinessOperation obj = CreateBusinessOperationObject(defaultProfile, name);
+            IBusinessOperation obj = CreateBusinessOperationObject(FactoryContextUtils.DefaultProfileName, name);
             return(obj);
         }
 

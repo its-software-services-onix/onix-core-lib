@@ -12,7 +12,6 @@ namespace Its.Onix.Core.Factories
 {
     public static class FactoryCacheContext
     {
-        private static readonly string defaultProfile = "DEFAULT";
 
         private static ILoggerFactory loggerFactory = null;
         private static Dictionary<string, PluginEntry> classMaps = new Dictionary<string, PluginEntry>();
@@ -21,17 +20,12 @@ namespace Its.Onix.Core.Factories
 
         public static void RegisterCache(Assembly asm, string name, string fqdn)
         {
-            PluginEntry entry = new PluginEntry(asm, name, fqdn);
-            classMaps.Add(name, entry);
+            FactoryContextUtils.RegisterItem(classMaps, asm, name, fqdn);
         }
         
         public static void RegisterCaches(Dictionary<string, PluginEntry> caches)
         {
-            foreach(KeyValuePair<string, PluginEntry> cache in caches)
-            {
-                PluginEntry entry = cache.Value;
-                RegisterCache(entry.Asm, entry.Key, entry.Fqdn);
-            }            
+            FactoryContextUtils.RegisterItems(classMaps, caches);
         }        
 
         static FactoryCacheContext()
@@ -45,7 +39,7 @@ namespace Its.Onix.Core.Factories
 
         public static ICacheContext GetCacheObject(string name)
         {
-            ICacheContext ctx = GetCacheObject(defaultProfile, name);
+            ICacheContext ctx = GetCacheObject(FactoryContextUtils.DefaultProfileName, name);
             return ctx;
         }
 

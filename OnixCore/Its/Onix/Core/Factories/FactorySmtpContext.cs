@@ -12,19 +12,14 @@ namespace Its.Onix.Core.Factories
         private static ILoggerFactory loggerFactory = null;
         private static Hashtable classMaps = new Hashtable();
 
-        private static void addClassConfig(string apiName, string fqdn)
-        {
-            classMaps.Add(apiName, fqdn);
-        }
-
         static FactorySmtpContext()
         {
-            initClassMap();
+            InitClassMap();
         }
 
-        private static void initClassMap()
+        private static void InitClassMap()
         {
-            addClassConfig("SendGridSmtpContext", "Its.Onix.Core.Smtp.SendGridSmtpContext");
+            FactoryContextUtils.AddItem(classMaps, "SendGridSmtpContext", "Its.Onix.Core.Smtp.SendGridSmtpContext");
         }
 
         public static ISmtpContext CreateSmtpObject(string name)
