@@ -12,19 +12,14 @@ namespace Its.Onix.Core.Factories
         private static ILoggerFactory loggerFactory = null;
         private static Hashtable classMaps = new Hashtable();
 
-        private static void addClassConfig(string apiName, string fqdn)
-        {
-            classMaps.Add(apiName, fqdn);
-        }
-
         static FactoryStorageContext()
         {
-            initClassMap();
+            InitClassMap();
         }
 
-        private static void initClassMap()
+        private static void InitClassMap()
         {
-            addClassConfig("FirebaseStorageContext", "Its.Onix.Core.Storages.FirebaseStorageContext");
+            FactoryContextUtils.AddItem(classMaps, "FirebaseStorageContext", "Its.Onix.Core.Storages.FirebaseStorageContext");
         }
 
         public static IStorageContext CreateStorageObject(string name)

@@ -12,19 +12,14 @@ namespace Its.Onix.Core.Factories
         private static ILoggerFactory loggerFactory = null;
         private static Hashtable classMaps = new Hashtable();
 
-        private static void addClassConfig(string apiName, string fqdn)
-        {
-            classMaps.Add(apiName, fqdn);
-        }
-
         static FactoryNoSqlContext()
         {
-            initClassMap();
+            InitClassMap();
         }
 
-        private static void initClassMap()
+        private static void InitClassMap()
         {
-            addClassConfig("FirebaseNoSqlContext", "Its.Onix.Core.NoSQL.FirebaseNoSqlContext");
+            FactoryContextUtils.AddItem(classMaps, "FirebaseNoSqlContext", "Its.Onix.Core.NoSQL.FirebaseNoSqlContext");
         }
 
         public static INoSqlContext CreateNoSqlObject(string name)
