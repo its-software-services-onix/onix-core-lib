@@ -13,7 +13,7 @@ using Its.Onix.Core.Utils.Serializers;
 
 namespace Its.Onix.Core.Applications
 {
-	public abstract class ConsoleAppBase : IConsoleApp
+	public abstract class ConsoleAppBase : IApplication
 	{
         private ILogger appLogger;
         private readonly Hashtable arguments = new Hashtable();

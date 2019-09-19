@@ -14,6 +14,10 @@ namespace Its.Onix.Core.Applications
             pv = provider;
         }
 
+        public ConsoleAppBaseMocked()
+        {
+        }
+
         protected override int Execute()
         {
             string host = Environment.GetEnvironmentVariable("ONIX_FIREBASE_DATABASE");

@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Its.Onix.Core.Applications
 {
-	public interface IConsoleApp
+	public interface IApplication
 	{
         int Run();
         OptionSet CreateOptionSet();
