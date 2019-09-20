@@ -2,6 +2,7 @@ using System;
 using Its.Onix.Core.NoSQL;
 using Its.Onix.Core.Storages;
 using Its.Onix.Core.Smtp;
+using Its.Onix.Core.Databases;
 
 using Microsoft.Extensions.Logging;
 
@@ -14,6 +15,7 @@ namespace Its.Onix.Core.Business
         private INoSqlContext noSqlContext = null;
         private IStorageContext storageContext = null;
         private ISmtpContext smtpContext = null;
+        private BaseDbContext dbContext = null;
 
         public void SetNoSqlContext(INoSqlContext context)
         {
@@ -47,6 +49,15 @@ namespace Its.Onix.Core.Business
             return smtpContext;
         }  
 
+        public void SetDatabaseContext(BaseDbContext context)
+        {
+            dbContext = context;
+        }
+
+        public BaseDbContext GetDatabaseContext()
+        {
+            return dbContext;
+        }  
 
         public void SetLogger(ILogger logger)
         {
@@ -64,6 +75,7 @@ namespace Its.Onix.Core.Business
             SetNoSqlContext(source.GetNoSqlContext());
             SetSmtpContext(source.GetSmtpContext());
             SetStorageContext(source.GetStorageContext());
+            SetDatabaseContext(source.GetDatabaseContext());
         }     
     }
 }
