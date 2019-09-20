@@ -1,4 +1,4 @@
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\LogUtils.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\LogUtils.cs
 FN:8,System.Void Its.Onix.Core.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])
 FNDA:21,System.Void Its.Onix.Core.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])
 DA:9,21
@@ -21,7 +21,7 @@ BRH:2
 FNF:2
 FNH:2
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\Serializers\CRoot.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\Serializers\CRoot.cs
 FN:21,Its.Onix.Core.Commons.Table.CTable Its.Onix.Core.Utils.Serializers.CRoot::get_Param()
 FNDA:13,Its.Onix.Core.Commons.Table.CTable Its.Onix.Core.Utils.Serializers.CRoot::get_Param()
 DA:22,13
@@ -58,7 +58,7 @@ BRH:0
 FNF:5
 FNH:5
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\Serializers\CTableToXml.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\Serializers\CTableToXml.cs
 FN:18,System.String Its.Onix.Core.Utils.Serializers.CTableToXml::Serialize()
 FNDA:4,System.String Its.Onix.Core.Utils.Serializers.CTableToXml::Serialize()
 DA:19,4
@@ -129,7 +129,7 @@ BRH:6
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\Serializers\XmlToCTable.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Utils\Serializers\XmlToCTable.cs
 FN:18,Its.Onix.Core.Utils.Serializers.CRoot Its.Onix.Core.Utils.Serializers.XmlToCTable::Deserialize()
 FNDA:14,Its.Onix.Core.Utils.Serializers.CRoot Its.Onix.Core.Utils.Serializers.XmlToCTable::Deserialize()
 DA:19,14
@@ -234,7 +234,7 @@ BRH:16
 FNF:5
 FNH:5
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Storages\FirebaseStorageContext.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Storages\FirebaseStorageContext.cs
 FN:23,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::AuthenToFirebase()
 FNDA:5,System.Void Its.Onix.Core.Storages.FirebaseStorageContext::AuthenToFirebase()
 DA:24,5
@@ -316,7 +316,7 @@ BRH:4
 FNF:10
 FNH:10
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Smtp\Mail.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Smtp\Mail.cs
 FN:6,System.String Its.Onix.Core.Smtp.Mail::get_From()
 FNDA:4,System.String Its.Onix.Core.Smtp.Mail::get_From()
 DA:7,4
@@ -348,7 +348,7 @@ BRH:0
 FNF:8
 FNH:8
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Smtp\SendGridSmtpContext.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Smtp\SendGridSmtpContext.cs
 FN:6,System.Void Its.Onix.Core.Smtp.SendGridSmtpContext::.ctor()
 FNDA:3,System.Void Its.Onix.Core.Smtp.SendGridSmtpContext::.ctor()
 DA:7,3
@@ -361,7 +361,7 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Smtp\SmtpContextBase.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Smtp\SmtpContextBase.cs
 FN:22,System.Void Its.Onix.Core.Smtp.SmtpContextBase::SetSmtpConfigByEnv(System.String,System.String,System.String,System.String)
 FNDA:2,System.Void Its.Onix.Core.Smtp.SmtpContextBase::SetSmtpConfigByEnv(System.String,System.String,System.String,System.String)
 DA:23,2
@@ -426,7 +426,7 @@ BRH:2
 FNF:6
 FNH:6
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\NoSQL\FirebaseNoSqlContext.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\NoSQL\FirebaseNoSqlContext.cs
 FN:46,Firebase.Database.FirebaseClient Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetFirebaseRefresh()
 FNDA:14,Firebase.Database.FirebaseClient Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetFirebaseRefresh()
 DA:47,14
@@ -632,7 +632,7 @@ BRH:26
 FNF:22
 FNH:22
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryApplicationContext.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryApplicationContext.cs
 FN:21,System.Void Its.Onix.Core.Factories.FactoryApplicationContext::ClearRegisteredItems()
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryApplicationContext::ClearRegisteredItems()
 DA:22,1
@@ -687,170 +687,198 @@ BRH:4
 FNF:6
 FNH:6
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryBusinessOperation.cs
-FN:17,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.ContextGroup::get_NoSqlContext()
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryBusinessOperation.cs
+FN:18,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.ContextGroup::get_NoSqlContext()
 FNDA:9,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.ContextGroup::get_NoSqlContext()
-DA:18,9
-FN:18,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.ContextGroup::get_StorageContext()
-FNDA:9,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.ContextGroup::get_StorageContext()
 DA:19,9
-FN:19,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.ContextGroup::get_SmtpContext()
-FNDA:9,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.ContextGroup::get_SmtpContext()
+FN:19,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.ContextGroup::get_StorageContext()
+FNDA:9,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.ContextGroup::get_StorageContext()
 DA:20,9
-FN:34,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::ClearRegisteredItems()
+FN:20,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.ContextGroup::get_SmtpContext()
+FNDA:9,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.ContextGroup::get_SmtpContext()
+DA:21,9
+FN:21,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.ContextGroup::get_DatabaseContext()
+FNDA:9,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.ContextGroup::get_DatabaseContext()
+DA:22,9
+FN:36,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::ClearRegisteredItems()
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::ClearRegisteredItems()
-DA:35,1
-DA:36,1
 DA:37,1
-FN:39,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::RegisterBusinessOperation(System.Reflection.Assembly,System.String,System.String)
+DA:38,1
+DA:39,1
+FN:41,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::RegisterBusinessOperation(System.Reflection.Assembly,System.String,System.String)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::RegisterBusinessOperation(System.Reflection.Assembly,System.String,System.String)
-DA:40,1
-DA:41,1
 DA:42,1
-FN:44,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::RegisterBusinessOperations(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
+DA:43,1
+DA:44,1
+FN:46,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::RegisterBusinessOperations(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::RegisterBusinessOperations(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
-DA:45,1
-DA:46,1
 DA:47,1
-FN:49,Its.Onix.Core.Factories.ContextGroup Its.Onix.Core.Factories.FactoryBusinessOperation::GetContextGroup(System.String)
-FNDA:17,Its.Onix.Core.Factories.ContextGroup Its.Onix.Core.Factories.FactoryBusinessOperation::GetContextGroup(System.String)
-DA:50,17
-DA:51,17
-DA:52,17
-DA:53,15
-DA:54,15
-DA:55,15
-DA:57,2
-DA:58,2
+DA:48,1
+DA:49,1
+FN:51,Its.Onix.Core.Factories.ContextGroup Its.Onix.Core.Factories.FactoryBusinessOperation::GetContextGroup(System.String)
+FNDA:21,Its.Onix.Core.Factories.ContextGroup Its.Onix.Core.Factories.FactoryBusinessOperation::GetContextGroup(System.String)
+DA:52,21
+DA:53,21
+DA:54,21
+DA:55,19
+DA:56,19
+DA:57,19
 DA:59,2
 DA:60,2
-DA:62,17
-DA:63,17
-BRDA:52,16,0,15
-BRDA:52,16,1,2
-FN:66,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetNoSqlContext(System.String,Its.Onix.Core.NoSQL.INoSqlContext)
+DA:61,2
+DA:62,2
+DA:64,21
+DA:65,21
+BRDA:54,16,0,19
+BRDA:54,16,1,2
+FN:68,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetNoSqlContext(System.String,Its.Onix.Core.NoSQL.INoSqlContext)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetNoSqlContext(System.String,Its.Onix.Core.NoSQL.INoSqlContext)
-DA:67,1
-DA:68,1
 DA:69,1
 DA:70,1
-FN:72,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetNoSqlContext(System.String)
+DA:71,1
+DA:72,1
+FN:74,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetNoSqlContext(System.String)
 FNDA:1,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetNoSqlContext(System.String)
-DA:73,1
-DA:74,1
 DA:75,1
 DA:76,1
-FN:78,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetNoSqlContext(Its.Onix.Core.NoSQL.INoSqlContext)
+DA:77,1
+DA:78,1
+FN:80,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetNoSqlContext(Its.Onix.Core.NoSQL.INoSqlContext)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetNoSqlContext(Its.Onix.Core.NoSQL.INoSqlContext)
-DA:79,1
-DA:80,1
 DA:81,1
 DA:82,1
-FN:84,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetNoSqlContext()
+DA:83,1
+DA:84,1
+FN:86,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetNoSqlContext()
 FNDA:1,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetNoSqlContext()
-DA:85,1
-DA:86,1
 DA:87,1
 DA:88,1
-FN:93,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetStorageContext(System.String,Its.Onix.Core.Storages.IStorageContext)
+DA:89,1
+DA:90,1
+FN:95,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetStorageContext(System.String,Its.Onix.Core.Storages.IStorageContext)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetStorageContext(System.String,Its.Onix.Core.Storages.IStorageContext)
-DA:94,1
-DA:95,1
 DA:96,1
 DA:97,1
-FN:99,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetStorageContext(System.String)
+DA:98,1
+DA:99,1
+FN:101,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetStorageContext(System.String)
 FNDA:1,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetStorageContext(System.String)
-DA:100,1
-DA:101,1
 DA:102,1
 DA:103,1
-FN:105,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetStorageContext(Its.Onix.Core.Storages.IStorageContext)
+DA:104,1
+DA:105,1
+FN:107,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetStorageContext(Its.Onix.Core.Storages.IStorageContext)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetStorageContext(Its.Onix.Core.Storages.IStorageContext)
-DA:106,1
-DA:107,1
 DA:108,1
 DA:109,1
-FN:111,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetStorageContext()
+DA:110,1
+DA:111,1
+FN:113,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetStorageContext()
 FNDA:1,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetStorageContext()
-DA:112,1
-DA:113,1
 DA:114,1
 DA:115,1
-FN:120,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetSmtpContext(System.String,Its.Onix.Core.Smtp.ISmtpContext)
+DA:116,1
+DA:117,1
+FN:122,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetSmtpContext(System.String,Its.Onix.Core.Smtp.ISmtpContext)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetSmtpContext(System.String,Its.Onix.Core.Smtp.ISmtpContext)
-DA:121,1
-DA:122,1
 DA:123,1
 DA:124,1
-FN:126,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetSmtpContext(System.String)
+DA:125,1
+DA:126,1
+FN:128,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetSmtpContext(System.String)
 FNDA:1,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetSmtpContext(System.String)
-DA:127,1
-DA:128,1
 DA:129,1
 DA:130,1
-FN:132,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetSmtpContext(Its.Onix.Core.Smtp.ISmtpContext)
+DA:131,1
+DA:132,1
+FN:134,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetSmtpContext(Its.Onix.Core.Smtp.ISmtpContext)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetSmtpContext(Its.Onix.Core.Smtp.ISmtpContext)
-DA:133,1
-DA:134,1
 DA:135,1
 DA:136,1
-FN:138,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetSmtpContext()
+DA:137,1
+DA:138,1
+FN:140,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetSmtpContext()
 FNDA:1,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetSmtpContext()
-DA:139,1
-DA:140,1
 DA:141,1
 DA:142,1
-FN:146,Its.Onix.Core.Business.IBusinessOperation Its.Onix.Core.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String,System.String)
+DA:143,1
+DA:144,1
+FN:150,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetDatabaseContext(System.String,Its.Onix.Core.Databases.BaseDbContext)
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetDatabaseContext(System.String,Its.Onix.Core.Databases.BaseDbContext)
+DA:151,1
+DA:152,1
+DA:153,1
+DA:154,1
+FN:156,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetDatabaseContext(System.String)
+FNDA:1,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetDatabaseContext(System.String)
+DA:157,1
+DA:158,1
+DA:159,1
+DA:160,1
+FN:162,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetDatabaseContext(Its.Onix.Core.Databases.BaseDbContext)
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetDatabaseContext(Its.Onix.Core.Databases.BaseDbContext)
+DA:163,1
+DA:164,1
+DA:165,1
+DA:166,1
+FN:168,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetDatabaseContext()
+FNDA:1,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.FactoryBusinessOperation::GetDatabaseContext()
+DA:169,1
+DA:170,1
+DA:171,1
+DA:172,1
+FN:175,Its.Onix.Core.Business.IBusinessOperation Its.Onix.Core.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String,System.String)
 FNDA:7,Its.Onix.Core.Business.IBusinessOperation Its.Onix.Core.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String,System.String)
-DA:147,7
-DA:148,7
-DA:149,2
-DA:150,2
-DA:153,5
-DA:155,5
-DA:156,5
-DA:158,5
-DA:160,5
-DA:161,5
-DA:162,5
-DA:164,5
-DA:165,5
-DA:166,5
-DA:167,5
-DA:168,5
-DA:169,5
-DA:171,5
-DA:172,5
-BRDA:148,19,0,2
-BRDA:148,19,1,5
-BRDA:164,144,0,5
-BRDA:164,144,1,5
-FN:174,Its.Onix.Core.Business.IBusinessOperation Its.Onix.Core.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
+DA:176,7
+DA:177,7
+DA:178,2
+DA:179,2
+DA:182,5
+DA:184,5
+DA:185,5
+DA:187,5
+DA:189,5
+DA:190,5
+DA:191,5
+DA:192,5
+DA:194,5
+DA:195,5
+DA:196,5
+DA:197,5
+DA:198,5
+DA:199,5
+DA:201,5
+DA:202,5
+BRDA:177,19,0,2
+BRDA:177,19,1,5
+BRDA:194,157,0,5
+BRDA:194,157,1,5
+FN:204,Its.Onix.Core.Business.IBusinessOperation Its.Onix.Core.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
 FNDA:5,Its.Onix.Core.Business.IBusinessOperation Its.Onix.Core.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
-DA:175,5
-DA:176,5
-DA:177,4
-DA:178,4
-FN:180,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+DA:205,5
+DA:206,5
+DA:207,4
+DA:208,4
+FN:210,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
-DA:181,1
-DA:182,1
-DA:183,1
-FN:24,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::.cctor()
+DA:211,1
+DA:212,1
+DA:213,1
+FN:26,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::.cctor()
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryBusinessOperation::.cctor()
-DA:25,1
 DA:27,1
-DA:28,1
-DA:31,1
-DA:32,1
-LF:103
-LH:103
+DA:29,1
+DA:30,1
+DA:33,1
+DA:34,1
+LF:121
+LH:121
 BRF:6
 BRH:6
-FNF:23
-FNH:23
+FNF:28
+FNH:28
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryCacheContext.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryCacheContext.cs
 FN:21,System.Void Its.Onix.Core.Factories.FactoryCacheContext::RegisterCache(System.Reflection.Assembly,System.String,System.String)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryCacheContext::RegisterCache(System.Reflection.Assembly,System.String,System.String)
 DA:22,1
@@ -933,29 +961,29 @@ BRH:8
 FNF:7
 FNH:7
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryContextUtils.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryContextUtils.cs
 FN:15,System.Void Its.Onix.Core.Factories.FactoryContextUtils::AddItem(System.Collections.Hashtable,System.String,System.String)
 FNDA:3,System.Void Its.Onix.Core.Factories.FactoryContextUtils::AddItem(System.Collections.Hashtable,System.String,System.String)
 DA:16,3
 DA:17,3
 DA:18,3
 FN:20,System.Void Its.Onix.Core.Factories.FactoryContextUtils::RegisterItem(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>,System.Reflection.Assembly,System.String,System.String)
-FNDA:15,System.Void Its.Onix.Core.Factories.FactoryContextUtils::RegisterItem(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>,System.Reflection.Assembly,System.String,System.String)
-DA:21,15
-DA:22,15
-DA:23,15
-DA:24,15
+FNDA:17,System.Void Its.Onix.Core.Factories.FactoryContextUtils::RegisterItem(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>,System.Reflection.Assembly,System.String,System.String)
+DA:21,17
+DA:22,17
+DA:23,17
+DA:24,17
 FN:26,System.Void Its.Onix.Core.Factories.FactoryContextUtils::RegisterItems(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>,System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
-FNDA:3,System.Void Its.Onix.Core.Factories.FactoryContextUtils::RegisterItems(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>,System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
-DA:27,3
-DA:28,33
-DA:29,12
-DA:30,12
-DA:31,12
-DA:32,12
-DA:33,3
-BRDA:28,61,1,12
-BRDA:28,61,0,3
+FNDA:4,System.Void Its.Onix.Core.Factories.FactoryContextUtils::RegisterItems(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>,System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
+DA:27,4
+DA:28,38
+DA:29,13
+DA:30,13
+DA:31,13
+DA:32,13
+DA:33,4
+BRDA:28,61,1,13
+BRDA:28,61,0,4
 FN:12,System.Void Its.Onix.Core.Factories.FactoryContextUtils::.cctor()
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryContextUtils::.cctor()
 DA:13,1
@@ -966,7 +994,49 @@ BRH:2
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryNoSqlContext.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryDbContext.cs
+FN:18,System.Void Its.Onix.Core.Factories.FactoryDbContext::ClearRegisteredItems()
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryDbContext::ClearRegisteredItems()
+DA:19,1
+DA:20,1
+DA:21,1
+FN:23,System.Void Its.Onix.Core.Factories.FactoryDbContext::RegisterDbContext(System.Reflection.Assembly,System.String,System.String)
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryDbContext::RegisterDbContext(System.Reflection.Assembly,System.String,System.String)
+DA:24,1
+DA:25,1
+DA:26,1
+FN:28,System.Void Its.Onix.Core.Factories.FactoryDbContext::RegisterDbContexts(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryDbContext::RegisterDbContexts(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
+DA:29,1
+DA:30,1
+DA:31,1
+FN:33,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.FactoryDbContext::CreateDbContextObject(System.String,Its.Onix.Core.Databases.DbCredential)
+FNDA:4,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.FactoryDbContext::CreateDbContextObject(System.String,Its.Onix.Core.Databases.DbCredential)
+DA:34,4
+DA:35,4
+DA:36,2
+DA:37,2
+DA:40,2
+DA:42,2
+DA:43,2
+DA:45,2
+DA:46,2
+DA:47,2
+BRDA:35,19,0,2
+BRDA:35,19,1,2
+FN:11,System.Void Its.Onix.Core.Factories.FactoryDbContext::.cctor()
+FNDA:1,System.Void Its.Onix.Core.Factories.FactoryDbContext::.cctor()
+DA:12,1
+DA:15,1
+DA:16,1
+LF:22
+LH:22
+BRF:2
+BRH:2
+FNF:5
+FNH:5
+end_of_record
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryNoSqlContext.cs
 FN:20,System.Void Its.Onix.Core.Factories.FactoryNoSqlContext::InitClassMap()
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryNoSqlContext::InitClassMap()
 DA:21,1
@@ -1012,7 +1082,7 @@ BRH:4
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactorySmtpContext.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactorySmtpContext.cs
 FN:20,System.Void Its.Onix.Core.Factories.FactorySmtpContext::InitClassMap()
 FNDA:1,System.Void Its.Onix.Core.Factories.FactorySmtpContext::InitClassMap()
 DA:21,1
@@ -1058,7 +1128,7 @@ BRH:4
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryStorageContext.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryStorageContext.cs
 FN:20,System.Void Its.Onix.Core.Factories.FactoryStorageContext::InitClassMap()
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryStorageContext::InitClassMap()
 DA:21,1
@@ -1104,7 +1174,94 @@ BRH:4
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Table\CField.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Database\BaseDbContext.cs
+FN:15,Its.Onix.Core.Databases.DbCredential Its.Onix.Core.Databases.BaseDbContext::GetCredential()
+FNDA:2,Its.Onix.Core.Databases.DbCredential Its.Onix.Core.Databases.BaseDbContext::GetCredential()
+DA:16,2
+DA:17,2
+DA:18,2
+FN:20,System.Void Its.Onix.Core.Databases.BaseDbContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+FNDA:2,System.Void Its.Onix.Core.Databases.BaseDbContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+DA:21,2
+DA:22,2
+DA:23,2
+FN:25,System.Void Its.Onix.Core.Databases.BaseDbContext::Configure(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+FNDA:2,System.Void Its.Onix.Core.Databases.BaseDbContext::Configure(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+DA:26,2
+DA:27,2
+DA:28,1
+DA:29,1
+DA:30,1
+DA:31,2
+BRDA:27,14,0,1
+BRDA:27,14,1,2
+FN:33,System.Void Its.Onix.Core.Databases.BaseDbContext::TestOnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+FNDA:2,System.Void Its.Onix.Core.Databases.BaseDbContext::TestOnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+DA:34,2
+DA:35,2
+DA:36,2
+FN:7,System.Void Its.Onix.Core.Databases.BaseDbContext::.ctor(Its.Onix.Core.Databases.DbCredential)
+FNDA:6,System.Void Its.Onix.Core.Databases.BaseDbContext::.ctor(Its.Onix.Core.Databases.DbCredential)
+DA:8,6
+DA:10,6
+DA:11,6
+DA:12,6
+DA:13,6
+LF:20
+LH:20
+BRF:2
+BRH:2
+FNF:5
+FNH:5
+end_of_record
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Database\DbCredential.cs
+FN:14,System.Void Its.Onix.Core.Databases.DbCredential::SetDbCredential(System.String,System.Int32,System.String,System.String,System.String,System.String)
+FNDA:6,System.Void Its.Onix.Core.Databases.DbCredential::SetDbCredential(System.String,System.Int32,System.String,System.String,System.String,System.String)
+DA:15,6
+DA:16,6
+DA:17,6
+DA:18,6
+DA:19,6
+DA:20,6
+DA:21,6
+DA:22,6
+FN:34,System.Boolean Its.Onix.Core.Databases.DbCredential::IsProviderPgSql()
+FNDA:2,System.Boolean Its.Onix.Core.Databases.DbCredential::IsProviderPgSql()
+DA:35,2
+DA:36,2
+DA:37,2
+FN:39,System.String Its.Onix.Core.Databases.DbCredential::ConnectionStringPgSql()
+FNDA:1,System.String Its.Onix.Core.Databases.DbCredential::ConnectionStringPgSql()
+DA:40,1
+DA:41,1
+DA:42,1
+DA:43,1
+FN:6,System.Void Its.Onix.Core.Databases.DbCredential::.ctor(System.String,System.Int32,System.String,System.String,System.String)
+FNDA:6,System.Void Its.Onix.Core.Databases.DbCredential::.ctor(System.String,System.Int32,System.String,System.String,System.String)
+DA:7,6
+DA:8,6
+DA:9,6
+DA:10,6
+DA:11,6
+DA:12,6
+DA:24,2
+DA:25,2
+DA:26,2
+DA:27,2
+FN:28,System.Void Its.Onix.Core.Databases.DbCredential::.ctor(System.String,System.Int32,System.String,System.String,System.String,System.String)
+FNDA:4,System.Void Its.Onix.Core.Databases.DbCredential::.ctor(System.String,System.Int32,System.String,System.String,System.String,System.String)
+DA:29,4
+DA:30,4
+DA:31,4
+DA:32,4
+LF:29
+LH:29
+BRF:0
+BRH:0
+FNF:5
+FNH:5
+end_of_record
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Table\CField.cs
 FN:16,System.String Its.Onix.Core.Commons.Table.CField::GetValue()
 FNDA:42,System.String Its.Onix.Core.Commons.Table.CField::GetValue()
 DA:17,42
@@ -1134,7 +1291,7 @@ BRH:0
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Table\CTable.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Table\CTable.cs
 FN:23,System.Void Its.Onix.Core.Commons.Table.CTable::AddChildArray(System.String,System.Collections.ArrayList)
 FNDA:9,System.Void Its.Onix.Core.Commons.Table.CTable::AddChildArray(System.String,System.Collections.ArrayList)
 DA:24,9
@@ -1268,24 +1425,24 @@ BRH:12
 FNF:15
 FNH:15
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Plugin\PluginEntry.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Plugin\PluginEntry.cs
 FN:7,System.String Its.Onix.Core.Commons.Plugin.PluginEntry::get_Key()
-FNDA:39,System.String Its.Onix.Core.Commons.Plugin.PluginEntry::get_Key()
-DA:8,39
+FNDA:43,System.String Its.Onix.Core.Commons.Plugin.PluginEntry::get_Key()
+DA:8,43
 FN:8,System.String Its.Onix.Core.Commons.Plugin.PluginEntry::get_Fqdn()
-FNDA:49,System.String Its.Onix.Core.Commons.Plugin.PluginEntry::get_Fqdn()
-DA:9,49
+FNDA:55,System.String Its.Onix.Core.Commons.Plugin.PluginEntry::get_Fqdn()
+DA:9,55
 FN:9,System.Reflection.Assembly Its.Onix.Core.Commons.Plugin.PluginEntry::get_Asm()
-FNDA:49,System.Reflection.Assembly Its.Onix.Core.Commons.Plugin.PluginEntry::get_Asm()
-DA:10,49
+FNDA:55,System.Reflection.Assembly Its.Onix.Core.Commons.Plugin.PluginEntry::get_Asm()
+DA:10,55
 FN:11,System.Void Its.Onix.Core.Commons.Plugin.PluginEntry::.ctor(System.Reflection.Assembly,System.String,System.String)
-FNDA:27,System.Void Its.Onix.Core.Commons.Plugin.PluginEntry::.ctor(System.Reflection.Assembly,System.String,System.String)
-DA:12,27
-DA:13,27
-DA:14,27
-DA:15,27
-DA:16,27
-DA:17,27
+FNDA:30,System.Void Its.Onix.Core.Commons.Plugin.PluginEntry::.ctor(System.Reflection.Assembly,System.String,System.String)
+DA:12,30
+DA:13,30
+DA:14,30
+DA:15,30
+DA:16,30
+DA:17,30
 LF:9
 LH:9
 BRF:0
@@ -1293,7 +1450,7 @@ BRH:0
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Model\BaseModel.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Commons\Model\BaseModel.cs
 FN:6,System.String Its.Onix.Core.Commons.Model.BaseModel::get_Key()
 FNDA:70,System.String Its.Onix.Core.Commons.Model.BaseModel::get_Key()
 DA:7,70
@@ -1307,7 +1464,7 @@ BRH:0
 FNF:2
 FNH:2
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Caches\CacheBase.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Caches\CacheBase.cs
 FN:19,System.Void Its.Onix.Core.Caches.CacheBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
 FNDA:5,System.Void Its.Onix.Core.Caches.CacheBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
 DA:20,5
@@ -1379,68 +1536,80 @@ BRH:4
 FNF:10
 FNH:10
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Business\BusinessOperationBase.cs
-FN:18,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetNoSqlContext(Its.Onix.Core.NoSQL.INoSqlContext)
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Business\BusinessOperationBase.cs
+FN:20,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetNoSqlContext(Its.Onix.Core.NoSQL.INoSqlContext)
 FNDA:8,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetNoSqlContext(Its.Onix.Core.NoSQL.INoSqlContext)
-DA:19,8
-DA:20,8
 DA:21,8
-FN:23,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Business.BusinessOperationBase::GetNoSqlContext()
+DA:22,8
+DA:23,8
+FN:25,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Business.BusinessOperationBase::GetNoSqlContext()
 FNDA:3,Its.Onix.Core.NoSQL.INoSqlContext Its.Onix.Core.Business.BusinessOperationBase::GetNoSqlContext()
-DA:24,3
-DA:25,3
 DA:26,3
-FN:29,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetStorageContext(Its.Onix.Core.Storages.IStorageContext)
+DA:27,3
+DA:28,3
+FN:31,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetStorageContext(Its.Onix.Core.Storages.IStorageContext)
 FNDA:8,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetStorageContext(Its.Onix.Core.Storages.IStorageContext)
-DA:30,8
-DA:31,8
 DA:32,8
-FN:34,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Business.BusinessOperationBase::GetStorageContext()
+DA:33,8
+DA:34,8
+FN:36,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Business.BusinessOperationBase::GetStorageContext()
 FNDA:3,Its.Onix.Core.Storages.IStorageContext Its.Onix.Core.Business.BusinessOperationBase::GetStorageContext()
-DA:35,3
-DA:36,3
 DA:37,3
-FN:40,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetSmtpContext(Its.Onix.Core.Smtp.ISmtpContext)
+DA:38,3
+DA:39,3
+FN:42,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetSmtpContext(Its.Onix.Core.Smtp.ISmtpContext)
 FNDA:8,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetSmtpContext(Its.Onix.Core.Smtp.ISmtpContext)
-DA:41,8
-DA:42,8
 DA:43,8
-FN:45,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Business.BusinessOperationBase::GetSmtpContext()
+DA:44,8
+DA:45,8
+FN:47,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Business.BusinessOperationBase::GetSmtpContext()
 FNDA:3,Its.Onix.Core.Smtp.ISmtpContext Its.Onix.Core.Business.BusinessOperationBase::GetSmtpContext()
-DA:46,3
-DA:47,3
 DA:48,3
-FN:51,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
+DA:49,3
+DA:50,3
+FN:52,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetDatabaseContext(Its.Onix.Core.Databases.BaseDbContext)
+FNDA:6,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetDatabaseContext(Its.Onix.Core.Databases.BaseDbContext)
+DA:53,6
+DA:54,6
+DA:55,6
+FN:57,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Business.BusinessOperationBase::GetDatabaseContext()
+FNDA:1,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Business.BusinessOperationBase::GetDatabaseContext()
+DA:58,1
+DA:59,1
+DA:60,1
+FN:62,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
 FNDA:8,System.Void Its.Onix.Core.Business.BusinessOperationBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
-DA:52,8
-DA:53,8
-DA:54,8
-FN:56,Microsoft.Extensions.Logging.ILogger Its.Onix.Core.Business.BusinessOperationBase::GetLogger()
+DA:63,8
+DA:64,8
+DA:65,8
+FN:67,Microsoft.Extensions.Logging.ILogger Its.Onix.Core.Business.BusinessOperationBase::GetLogger()
 FNDA:3,Microsoft.Extensions.Logging.ILogger Its.Onix.Core.Business.BusinessOperationBase::GetLogger()
-DA:57,3
-DA:58,3
-DA:59,3
-FN:61,System.Void Its.Onix.Core.Business.BusinessOperationBase::CopyContexts(Its.Onix.Core.Business.BusinessOperationBase)
+DA:68,3
+DA:69,3
+DA:70,3
+FN:72,System.Void Its.Onix.Core.Business.BusinessOperationBase::CopyContexts(Its.Onix.Core.Business.BusinessOperationBase)
 FNDA:1,System.Void Its.Onix.Core.Business.BusinessOperationBase::CopyContexts(Its.Onix.Core.Business.BusinessOperationBase)
-DA:62,1
-DA:63,1
-DA:64,1
-DA:65,1
-DA:66,1
-DA:67,1
-FN:13,System.Void Its.Onix.Core.Business.BusinessOperationBase::.ctor()
+DA:73,1
+DA:74,1
+DA:75,1
+DA:76,1
+DA:77,1
+DA:78,1
+DA:79,1
+FN:14,System.Void Its.Onix.Core.Business.BusinessOperationBase::.ctor()
 FNDA:8,System.Void Its.Onix.Core.Business.BusinessOperationBase::.ctor()
-DA:14,8
 DA:15,8
 DA:16,8
-LF:33
-LH:33
+DA:17,8
+DA:18,8
+LF:41
+LH:41
 BRF:0
 BRH:0
-FNF:10
-FNH:10
+FNF:12
+FNH:12
 end_of_record
-SF:d:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Applications\ConsoleAppBase.cs
+SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Applications\ConsoleAppBase.cs
 FN:27,NDesk.Options.OptionSet Its.Onix.Core.Applications.ConsoleAppBase::CreateOptionSet()
 FNDA:2,NDesk.Options.OptionSet Its.Onix.Core.Applications.ConsoleAppBase::CreateOptionSet()
 DA:28,2

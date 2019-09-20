@@ -37,12 +37,12 @@ namespace Its.Onix.Core.Factories
                 throw new ArgumentNullException(String.Format("DbContext not found [{0}]", name));
             }
 
-
-            PluginEntry entry = classMaps[name];         
+            PluginEntry entry = classMaps[name];
 
             Assembly asm = Assembly.Load(entry.Asm.GetName());  
-            BaseDbContext obj = (BaseDbContext)asm.CreateInstance(entry.Fqdn);  //Inject credential here
-
+            Type t = asm.GetType(entry.Fqdn);
+            
+            BaseDbContext obj = (BaseDbContext) Activator.CreateInstance(t, credential);
             return(obj);
         }        
     }

@@ -8,6 +8,7 @@ using Moq;
 using Its.Onix.Core.Business;
 using Its.Onix.Core.NoSQL;
 using Its.Onix.Core.Storages;
+using Its.Onix.Core.Databases;
 using Its.Onix.Core.Smtp;
 using Its.Onix.Core.Commons.Plugin;
 
@@ -98,7 +99,12 @@ namespace Its.Onix.Core.Factories
             ISmtpContext noSmtpCtx1 = new Mock<ISmtpContext>().Object;
             FactoryBusinessOperation.SetSmtpContext(noSmtpCtx1);
             ISmtpContext noSmtpCtx2 = FactoryBusinessOperation.GetSmtpContext();
-            Assert.AreSame(noSqlCtx1, noSqlCtx2, "Setter and Getter should return the same thing!!!");                       
+            Assert.AreSame(noSqlCtx1, noSqlCtx2, "Setter and Getter should return the same thing!!!");   
+
+            BaseDbContext databaseCtx1 = new Mock<BaseDbContext>(null).Object;
+            FactoryBusinessOperation.SetDatabaseContext(databaseCtx1);
+            BaseDbContext databaseCtx2 = FactoryBusinessOperation.GetDatabaseContext();
+            Assert.AreSame(databaseCtx1, databaseCtx2, "Setter and Getter should return the same thing!!!");                                  
         } 
 
        [TestCase("PROFILE1")]
@@ -117,7 +123,12 @@ namespace Its.Onix.Core.Factories
             ISmtpContext noSmtpCtx1 = new Mock<ISmtpContext>().Object;
             FactoryBusinessOperation.SetSmtpContext(profile, noSmtpCtx1);
             ISmtpContext noSmtpCtx2 = FactoryBusinessOperation.GetSmtpContext(profile);
-            Assert.AreSame(noSqlCtx1, noSqlCtx2, "Setter and Getter should return the same thing!!!");                       
+            Assert.AreSame(noSqlCtx1, noSqlCtx2, "Setter and Getter should return the same thing!!!");
+
+            BaseDbContext databaseCtx1 = new Mock<BaseDbContext>(null).Object;
+            FactoryBusinessOperation.SetDatabaseContext(profile, databaseCtx1);
+            BaseDbContext databaseCtx2 = FactoryBusinessOperation.GetDatabaseContext(profile);
+            Assert.AreSame(databaseCtx1, databaseCtx2, "Setter and Getter should return the same thing!!!");                                 
         }                                           
     }        
 }

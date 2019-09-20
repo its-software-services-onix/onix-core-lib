@@ -6,6 +6,7 @@ using System.Reflection;
 using Its.Onix.Core.NoSQL;
 using Its.Onix.Core.Storages;
 using Its.Onix.Core.Smtp;
+using Its.Onix.Core.Databases;
 using Its.Onix.Core.Business;
 using Its.Onix.Core.Commons.Plugin;
 
@@ -18,6 +19,7 @@ namespace Its.Onix.Core.Factories
         public INoSqlContext NoSqlContext {get; set;}
         public IStorageContext StorageContext {get; set;}
         public ISmtpContext SmtpContext {get; set;}
+        public BaseDbContext DatabaseContext {get; set;}
     }
 
     public static class FactoryBusinessOperation
@@ -143,6 +145,33 @@ namespace Its.Onix.Core.Factories
         #endregion SmtpContext
 
 
+
+        #region DatabaseContext
+        public static void SetDatabaseContext(string profile, BaseDbContext ctx)
+        {
+            ContextGroup grp = GetContextGroup(profile);
+            grp.DatabaseContext = ctx;
+        }
+
+        public static BaseDbContext GetDatabaseContext(string profile)
+        {
+            ContextGroup grp = GetContextGroup(profile);
+            return grp.DatabaseContext;
+        }  
+
+        public static void SetDatabaseContext(BaseDbContext ctx)
+        {
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
+            grp.DatabaseContext = ctx;
+        }
+
+        public static BaseDbContext GetDatabaseContext()
+        {
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
+            return grp.DatabaseContext;
+        }                
+        #endregion DatabaseContext
+
         public static IBusinessOperation CreateBusinessOperationObject(string profile, string name)
         {        
             if (!classMaps.ContainsKey(name))
@@ -160,7 +189,8 @@ namespace Its.Onix.Core.Factories
             obj.SetNoSqlContext(grp.NoSqlContext);
             obj.SetStorageContext(grp.StorageContext);
             obj.SetSmtpContext(grp.SmtpContext);
-
+            obj.SetDatabaseContext(grp.DatabaseContext);
+            
             if (loggerFactory != null)
             {
                 Type t = obj.GetType();

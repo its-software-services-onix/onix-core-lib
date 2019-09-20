@@ -24,15 +24,15 @@ namespace Its.Onix.Core.Databases
 
         private void Configure(DbContextOptionsBuilder optionsBuilder)
         {
-            if (optionsBuilder.IsConfigured)
-            {
-                return;
-            }
-
             if (credential.IsProviderPgSql())
             {
                 optionsBuilder.UseNpgsql(credential.ConnectionStringPgSql());
             }
+        }
+
+        public void TestOnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            OnConfiguring(optionsBuilder);
         }
     }
 }

@@ -31,11 +31,6 @@ namespace Its.Onix.Core.Databases
             SetDbCredential(host, port, db, username, password, provider);
         }        
 
-        public string GetProvider()
-        {
-            return Provider;
-        }
-
         public bool IsProviderPgSql()
         {
             return Provider.Equals("pgsql");
@@ -43,7 +38,7 @@ namespace Its.Onix.Core.Databases
 
         public string ConnectionStringPgSql()
         {
-            string connStr = string.Format("Host={0};Database={1};Username={2};Password={3};");
+            string connStr = string.Format("Host={0};Port={1};Database={2};Username={3};Password={4};", Host, Port, Db, UserName, Password);
             return connStr;
         }              
     }
