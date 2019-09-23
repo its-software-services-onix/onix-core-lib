@@ -995,45 +995,52 @@ FNF:4
 FNH:4
 end_of_record
 SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryDbContext.cs
-FN:18,System.Void Its.Onix.Core.Factories.FactoryDbContext::ClearRegisteredItems()
+FN:20,System.Void Its.Onix.Core.Factories.FactoryDbContext::ClearRegisteredItems()
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryDbContext::ClearRegisteredItems()
-DA:19,1
-DA:20,1
 DA:21,1
-FN:23,System.Void Its.Onix.Core.Factories.FactoryDbContext::RegisterDbContext(System.Reflection.Assembly,System.String,System.String)
+DA:22,1
+DA:23,1
+FN:25,System.Void Its.Onix.Core.Factories.FactoryDbContext::RegisterDbContext(System.Reflection.Assembly,System.String,System.String)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryDbContext::RegisterDbContext(System.Reflection.Assembly,System.String,System.String)
-DA:24,1
-DA:25,1
 DA:26,1
-FN:28,System.Void Its.Onix.Core.Factories.FactoryDbContext::RegisterDbContexts(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
+DA:27,1
+DA:28,1
+FN:30,System.Void Its.Onix.Core.Factories.FactoryDbContext::RegisterDbContexts(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryDbContext::RegisterDbContexts(System.Collections.Generic.Dictionary`2<System.String,Its.Onix.Core.Commons.Plugin.PluginEntry>)
-DA:29,1
-DA:30,1
 DA:31,1
-FN:33,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.FactoryDbContext::CreateDbContextObject(System.String,Its.Onix.Core.Databases.DbCredential)
+DA:32,1
+DA:33,1
+FN:35,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.FactoryDbContext::CreateDbContextObject(System.String,Its.Onix.Core.Databases.DbCredential)
 FNDA:4,Its.Onix.Core.Databases.BaseDbContext Its.Onix.Core.Factories.FactoryDbContext::CreateDbContextObject(System.String,Its.Onix.Core.Databases.DbCredential)
-DA:34,4
-DA:35,4
-DA:36,2
-DA:37,2
-DA:40,2
+DA:36,4
+DA:37,4
+DA:38,2
+DA:39,2
 DA:42,2
-DA:43,2
+DA:44,2
 DA:45,2
-DA:46,2
 DA:47,2
-BRDA:35,19,0,2
-BRDA:35,19,1,2
-FN:11,System.Void Its.Onix.Core.Factories.FactoryDbContext::.cctor()
+DA:48,2
+DA:50,2
+DA:51,2
+BRDA:37,19,0,2
+BRDA:37,19,1,2
+FN:53,System.Void Its.Onix.Core.Factories.FactoryDbContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+FNDA:0,System.Void Its.Onix.Core.Factories.FactoryDbContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+DA:54,0
+DA:55,0
+DA:56,0
+FN:12,System.Void Its.Onix.Core.Factories.FactoryDbContext::.cctor()
 FNDA:1,System.Void Its.Onix.Core.Factories.FactoryDbContext::.cctor()
-DA:12,1
-DA:15,1
-DA:16,1
-LF:22
-LH:22
+DA:13,1
+DA:14,1
+DA:17,1
+DA:18,1
+LF:27
+LH:24
 BRF:2
 BRH:2
-FNF:5
+FNF:6
 FNH:5
 end_of_record
 SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Factories\FactoryNoSqlContext.cs
@@ -1175,44 +1182,53 @@ FNF:4
 FNH:4
 end_of_record
 SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Database\BaseDbContext.cs
-FN:15,Its.Onix.Core.Databases.DbCredential Its.Onix.Core.Databases.BaseDbContext::GetCredential()
+FN:17,Its.Onix.Core.Databases.DbCredential Its.Onix.Core.Databases.BaseDbContext::GetCredential()
 FNDA:2,Its.Onix.Core.Databases.DbCredential Its.Onix.Core.Databases.BaseDbContext::GetCredential()
-DA:16,2
-DA:17,2
 DA:18,2
-FN:20,System.Void Its.Onix.Core.Databases.BaseDbContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+DA:19,2
+DA:20,2
+FN:22,System.Void Its.Onix.Core.Databases.BaseDbContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
 FNDA:2,System.Void Its.Onix.Core.Databases.BaseDbContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
-DA:21,2
-DA:22,2
 DA:23,2
-FN:25,System.Void Its.Onix.Core.Databases.BaseDbContext::Configure(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+DA:24,2
+DA:25,2
+FN:27,System.Void Its.Onix.Core.Databases.BaseDbContext::Configure(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
 FNDA:2,System.Void Its.Onix.Core.Databases.BaseDbContext::Configure(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
-DA:26,2
-DA:27,2
-DA:28,1
-DA:29,1
-DA:30,1
-DA:31,2
-BRDA:27,14,0,1
-BRDA:27,14,1,2
-FN:33,System.Void Its.Onix.Core.Databases.BaseDbContext::TestOnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
-FNDA:2,System.Void Its.Onix.Core.Databases.BaseDbContext::TestOnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+DA:28,2
+DA:29,2
+DA:30,2
+DA:31,1
+DA:32,1
+DA:33,1
 DA:34,2
-DA:35,2
-DA:36,2
-FN:7,System.Void Its.Onix.Core.Databases.BaseDbContext::.ctor(Its.Onix.Core.Databases.DbCredential)
+BRDA:30,26,0,1
+BRDA:30,26,1,2
+FN:36,System.Void Its.Onix.Core.Databases.BaseDbContext::TestOnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+FNDA:2,System.Void Its.Onix.Core.Databases.BaseDbContext::TestOnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+DA:37,2
+DA:38,2
+DA:39,2
+FN:41,System.Void Its.Onix.Core.Databases.BaseDbContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+FNDA:2,System.Void Its.Onix.Core.Databases.BaseDbContext::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+DA:42,2
+DA:43,2
+DA:44,2
+FN:9,System.Void Its.Onix.Core.Databases.BaseDbContext::.ctor(Its.Onix.Core.Databases.DbCredential)
 FNDA:6,System.Void Its.Onix.Core.Databases.BaseDbContext::.ctor(Its.Onix.Core.Databases.DbCredential)
-DA:8,6
 DA:10,6
-DA:11,6
 DA:12,6
 DA:13,6
-LF:20
-LH:20
+DA:14,6
+DA:15,6
+FN:8,System.Void Its.Onix.Core.Databases.BaseDbContext::.cctor()
+FNDA:1,System.Void Its.Onix.Core.Databases.BaseDbContext::.cctor()
+DA:9,1
+LF:25
+LH:25
 BRF:2
 BRH:2
-FNF:5
-FNH:5
+FNF:7
+FNH:7
 end_of_record
 SF:D:\dev\projects\its_workspace\OnixCore\OnixCore\Its\Onix\Core\Database\DbCredential.cs
 FN:14,System.Void Its.Onix.Core.Databases.DbCredential::SetDbCredential(System.String,System.Int32,System.String,System.String,System.String,System.String)

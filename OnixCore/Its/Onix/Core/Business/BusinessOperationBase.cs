@@ -16,6 +16,7 @@ namespace Its.Onix.Core.Business
         private IStorageContext storageContext = null;
         private ISmtpContext smtpContext = null;
         private BaseDbContext dbContext = null;
+        private bool autoCommit = true;
 
         public void SetNoSqlContext(INoSqlContext context)
         {
@@ -68,6 +69,16 @@ namespace Its.Onix.Core.Business
         {
             return appLogger;
         }    
+
+        public void SetAutoCommit(bool autoCommit)
+        {
+            this.autoCommit = autoCommit;
+        }
+
+        public bool GetAutoCommit()
+        {
+            return autoCommit;
+        }
 
         public void CopyContexts(BusinessOperationBase source)
         {

@@ -20,6 +20,9 @@ namespace Its.Onix.Core.Business
         ISmtpContext GetSmtpContext(); 
         BaseDbContext GetDatabaseContext(); 
 
+        void SetAutoCommit(bool autoCommit);
+        bool GetAutoCommit();
+
         void SetLogger(ILogger logger);
         ILogger GetLogger();
     }
