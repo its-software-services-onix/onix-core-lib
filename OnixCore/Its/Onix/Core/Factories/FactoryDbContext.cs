@@ -4,11 +4,13 @@ using System.Reflection;
 
 using Its.Onix.Core.Databases;
 using Its.Onix.Core.Commons.Plugin;
+using Microsoft.Extensions.Logging;
 
 namespace Its.Onix.Core.Factories
 {
     public static class FactoryDbContext
     {
+        private static ILoggerFactory loggerFactory = null;
         private static Dictionary<string, PluginEntry> classMaps = new Dictionary<string, PluginEntry>();
 
         static FactoryDbContext()
@@ -43,8 +45,15 @@ namespace Its.Onix.Core.Factories
             Type t = asm.GetType(entry.Fqdn);
             
             BaseDbContext obj = (BaseDbContext) Activator.CreateInstance(t, credential);
+            obj.SetLoggerFactory(loggerFactory);
+            
             return(obj);
-        }        
+        } 
+
+        public static void SetLoggerFactory(ILoggerFactory logFact)
+        {
+            loggerFactory = logFact;
+        }               
     }
 
 }
