@@ -6,7 +6,7 @@ namespace Its.Onix.Core.Databases
 {
 	public class BaseDbContext : DbContext
 	{
-        private static ILoggerFactory loggerFactory = null;
+        private ILoggerFactory loggerFactory = null;
         private readonly DbCredential credential = null;
 
         public BaseDbContext(DbCredential credential)

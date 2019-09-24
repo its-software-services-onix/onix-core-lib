@@ -37,7 +37,7 @@ namespace Its.Onix.Core.Databases
         } 
         public string ConnectionStringSqLiteMemory()
         {
-            string connStr = string.Format("DataSource=:memory:");
+            string connStr = "DataSource=:memory:";
             return connStr;
         }  
 
