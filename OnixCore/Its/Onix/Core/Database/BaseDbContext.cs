@@ -31,6 +31,10 @@ namespace Its.Onix.Core.Databases
             {
                 optionsBuilder.UseNpgsql(credential.ConnectionStringPgSql());
             }
+            else if (credential.IsProviderSqLiteMemory())
+            {
+                optionsBuilder.UseSqlite(credential.ConnectionStringSqLiteMemory());
+            }            
         }
 
         public void TestOnConfiguring(DbContextOptionsBuilder optionsBuilder)

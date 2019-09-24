@@ -16,6 +16,7 @@ namespace Its.Onix.Core.Databases
 
         [TestCase("host", 999, "db", "user", "password", "")]
         [TestCase("host", 999, "db", "user", "password", "pgsql")]
+        [TestCase("", 999, "", "", "", "sqlite_inmem")]
         public void ConfigureObjectTest(string host, int port, string db, string uname, string pw, string provider)
         {
             var credential = new DbCredential(host, port, db, uname, pw, provider);

@@ -31,6 +31,16 @@ namespace Its.Onix.Core.Databases
             SetDbCredential(host, port, db, username, password, provider);
         }        
 
+        public bool IsProviderSqLiteMemory()
+        {
+            return Provider.Equals("sqlite_inmem");
+        } 
+        public string ConnectionStringSqLiteMemory()
+        {
+            string connStr = string.Format("DataSource=:memory:");
+            return connStr;
+        }  
+
         public bool IsProviderPgSql()
         {
             return Provider.Equals("pgsql");
