@@ -19,6 +19,7 @@ namespace Its.Onix.Core.Factories
 
             FactoryDbContext.ClearRegisteredItems();
             FactoryDbContext.RegisterDbContext(asm, "MockedDbContext", "Its.Onix.Core.Databases.MockedDbContext");
+            FactoryDbContext.SetLoggerFactory(null);            
 
             var items = new Dictionary<string, PluginEntry>();
             items.Add("MockedDbContext_1", new PluginEntry(asm, "MockedDbContext_1", "Its.Onix.Core.Databases.MockedDbContext"));

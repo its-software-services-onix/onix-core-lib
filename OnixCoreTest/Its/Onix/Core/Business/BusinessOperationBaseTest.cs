@@ -40,7 +40,11 @@ namespace Its.Onix.Core.Business
             ISmtpContext noSmtpCtx1 = new Mock<ISmtpContext>().Object;
             opr.SetSmtpContext(noSmtpCtx1);
             ISmtpContext noSmtpCtx2 = opr.GetSmtpContext();
-            Assert.AreSame(noSqlCtx1, noSqlCtx2, "Setter and Getter should return the same thing!!!");                       
+            Assert.AreSame(noSqlCtx1, noSqlCtx2, "Setter and Getter should return the same thing!!!");     
+
+            opr.SetAutoCommit(false);
+            bool autoCommit = opr.GetAutoCommit();
+            Assert.AreEqual(false, autoCommit, "Setter and Getter should return the same thing!!!");     
         }      
 
         [TestCase]
