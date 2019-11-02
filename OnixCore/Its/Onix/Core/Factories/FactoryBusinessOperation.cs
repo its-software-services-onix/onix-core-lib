@@ -92,12 +92,11 @@ namespace Its.Onix.Core.Factories
 
 
         #region StorageContext
-        public static void SetStorageContext(string profile, IStorageContext ctx)
+        public static IStorageContext GetStorageContext()
         {
-            ContextGroup grp = GetContextGroup(profile);
-            grp.StorageContext = ctx;
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
+            return grp.StorageContext;
         }
-
         public static IStorageContext GetStorageContext(string profile)
         {
             ContextGroup grp = GetContextGroup(profile);
@@ -110,10 +109,10 @@ namespace Its.Onix.Core.Factories
             grp.StorageContext = ctx;
         }
 
-        public static IStorageContext GetStorageContext()
+        public static void SetStorageContext(string profile, IStorageContext ctx)
         {
-            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
-            return grp.StorageContext;
+            ContextGroup grp = GetContextGroup(profile);
+            grp.StorageContext = ctx;
         }
         #endregion StorageContext
 
