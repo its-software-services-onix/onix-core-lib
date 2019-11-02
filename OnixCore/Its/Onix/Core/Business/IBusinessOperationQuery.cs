@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Its.Onix.Core.Commons.Table;
 

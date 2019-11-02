@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-
 using Its.Onix.Core.Commons.Table;
 
 namespace Its.Onix.Core.Utils.Serializers

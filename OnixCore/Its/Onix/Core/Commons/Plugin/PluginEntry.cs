@@ -1,4 +1,3 @@
-using System;
 using System.Reflection;
 
 namespace Its.Onix.Core.Commons.Plugin
