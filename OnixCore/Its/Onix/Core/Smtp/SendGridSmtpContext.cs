@@ -1,5 +1,3 @@
-using System;
-
 namespace Its.Onix.Core.Smtp
 {
 	public class SendGridSmtpContext : SmtpContextBase

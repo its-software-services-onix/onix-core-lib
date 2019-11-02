@@ -13,13 +13,13 @@ using Its.Onix.Core.Commons.Plugin;
 using Microsoft.Extensions.Logging;
 
 namespace Its.Onix.Core.Factories
-{   
+{
     internal class ContextGroup
     {
-        public INoSqlContext NoSqlContext {get; set;}
-        public IStorageContext StorageContext {get; set;}
-        public ISmtpContext SmtpContext {get; set;}
-        public BaseDbContext DatabaseContext {get; set;}
+        public INoSqlContext NoSqlContext { get; set; }
+        public IStorageContext StorageContext { get; set; }
+        public ISmtpContext SmtpContext { get; set; }
+        public BaseDbContext DatabaseContext { get; set; }
     }
 
     public static class FactoryBusinessOperation
@@ -37,7 +37,7 @@ namespace Its.Onix.Core.Factories
         {
             classMaps.Clear();
         }
-        
+
         public static void RegisterBusinessOperation(Assembly asm, string apiName, string fqdn)
         {
             FactoryContextUtils.RegisterItem(classMaps, asm, apiName, fqdn);
@@ -53,41 +53,41 @@ namespace Its.Onix.Core.Factories
             ContextGroup grp = null;
             if (contextProfiles.Contains(profile))
             {
-                grp = (ContextGroup) contextProfiles[profile];                
+                grp = (ContextGroup)contextProfiles[profile];
             }
             else
             {
                 grp = new ContextGroup();
-                contextProfiles[profile] = grp; 
+                contextProfiles[profile] = grp;
             }
 
             return grp;
         }
 
         #region NoSQLContext
-        public static void SetNoSqlContext(string profile, INoSqlContext ctx)
+        public static INoSqlContext GetNoSqlContext()
         {
-            ContextGroup grp = GetContextGroup(profile);
-            grp.NoSqlContext = ctx;
-        }        
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
+            return grp.NoSqlContext;
+        }
 
         public static INoSqlContext GetNoSqlContext(string profile)
         {
             ContextGroup grp = GetContextGroup(profile);
             return grp.NoSqlContext;
-        }   
+        }
 
         public static void SetNoSqlContext(INoSqlContext ctx)
         {
             ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
             grp.NoSqlContext = ctx;
-        }        
+        }
 
-        public static INoSqlContext GetNoSqlContext()
+        public static void SetNoSqlContext(string profile, INoSqlContext ctx)
         {
-            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
-            return grp.NoSqlContext;
-        }            
+            ContextGroup grp = GetContextGroup(profile);
+            grp.NoSqlContext = ctx;
+        }
         #endregion NoSQLContext
 
 
@@ -102,7 +102,7 @@ namespace Its.Onix.Core.Factories
         {
             ContextGroup grp = GetContextGroup(profile);
             return grp.StorageContext;
-        }  
+        }
 
         public static void SetStorageContext(IStorageContext ctx)
         {
@@ -114,22 +114,22 @@ namespace Its.Onix.Core.Factories
         {
             ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
             return grp.StorageContext;
-        }                
+        }
         #endregion StorageContext
 
 
         #region SmtpContext
-        public static void SetSmtpContext(string profile, ISmtpContext ctx)
+        public static ISmtpContext GetSmtpContext()
         {
-            ContextGroup grp = GetContextGroup(profile);
-            grp.SmtpContext = ctx;
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
+            return grp.SmtpContext;
         }
 
         public static ISmtpContext GetSmtpContext(string profile)
         {
             ContextGroup grp = GetContextGroup(profile);
             return grp.SmtpContext;
-        }          
+        }
 
         public static void SetSmtpContext(ISmtpContext ctx)
         {
@@ -137,27 +137,27 @@ namespace Its.Onix.Core.Factories
             grp.SmtpContext = ctx;
         }
 
-        public static ISmtpContext GetSmtpContext()
+        public static void SetSmtpContext(string profile, ISmtpContext ctx)
         {
-            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
-            return grp.SmtpContext;
-        }           
+            ContextGroup grp = GetContextGroup(profile);
+            grp.SmtpContext = ctx;
+        }
         #endregion SmtpContext
 
 
 
         #region DatabaseContext
-        public static void SetDatabaseContext(string profile, BaseDbContext ctx)
+        public static BaseDbContext GetDatabaseContext()
         {
-            ContextGroup grp = GetContextGroup(profile);
-            grp.DatabaseContext = ctx;
+            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
+            return grp.DatabaseContext;
         }
 
         public static BaseDbContext GetDatabaseContext(string profile)
         {
             ContextGroup grp = GetContextGroup(profile);
             return grp.DatabaseContext;
-        }  
+        }
 
         public static void SetDatabaseContext(BaseDbContext ctx)
         {
@@ -165,32 +165,32 @@ namespace Its.Onix.Core.Factories
             grp.DatabaseContext = ctx;
         }
 
-        public static BaseDbContext GetDatabaseContext()
+        public static void SetDatabaseContext(string profile, BaseDbContext ctx)
         {
-            ContextGroup grp = GetContextGroup(FactoryContextUtils.DefaultProfileName);
-            return grp.DatabaseContext;
-        }                
+            ContextGroup grp = GetContextGroup(profile);
+            grp.DatabaseContext = ctx;
+        }
         #endregion DatabaseContext
 
         public static IBusinessOperation CreateBusinessOperationObject(string profile, string name)
-        {        
+        {
             if (!classMaps.ContainsKey(name))
             {
                 throw new ArgumentNullException(String.Format("Operation not found [{0}]", name));
             }
 
-            PluginEntry entry = classMaps[name];         
+            PluginEntry entry = classMaps[name];
 
-            Assembly asm = Assembly.Load(entry.Asm.GetName());  
+            Assembly asm = Assembly.Load(entry.Asm.GetName());
             IBusinessOperation obj = (IBusinessOperation)asm.CreateInstance(entry.Fqdn);
-            
+
             ContextGroup grp = GetContextGroup(profile);
 
             obj.SetNoSqlContext(grp.NoSqlContext);
             obj.SetStorageContext(grp.StorageContext);
             obj.SetSmtpContext(grp.SmtpContext);
             obj.SetDatabaseContext(grp.DatabaseContext);
-            
+
             if (loggerFactory != null)
             {
                 Type t = obj.GetType();
@@ -198,18 +198,18 @@ namespace Its.Onix.Core.Factories
                 obj.SetLogger(logger);
             }
 
-            return(obj);
+            return (obj);
         }
 
         public static IBusinessOperation CreateBusinessOperationObject(string name)
-        {        
+        {
             IBusinessOperation obj = CreateBusinessOperationObject(FactoryContextUtils.DefaultProfileName, name);
-            return(obj);
+            return (obj);
         }
 
         public static void SetLoggerFactory(ILoggerFactory logFact)
         {
             loggerFactory = logFact;
-        }         
-    } 
+        }
+    }
 }
