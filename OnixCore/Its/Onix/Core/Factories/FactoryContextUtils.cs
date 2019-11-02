@@ -20,7 +20,7 @@ namespace Its.Onix.Core.Factories
         public static void RegisterItem(Dictionary<string, PluginEntry> dests, Assembly asm, string name, string fqdn)
         {
             PluginEntry entry = new PluginEntry(asm, name, fqdn);
-            dests.Add(name, entry);
+            dests[name] = entry;
         }
 
         public static void RegisterItems(Dictionary<string, PluginEntry> dests, Dictionary<string, PluginEntry> items)
