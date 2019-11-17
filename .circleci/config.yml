@@ -4,7 +4,7 @@ version: 2.1
 parameters:
   package_version:
     type: string
-    default: "0.0.0-SNAPSHOT"
+    default: "1.0.23"
 
   params_file:
     type: string
