@@ -81,7 +81,7 @@ jobs:
 
           if [ "${BT}" == 'release' ]
           then
-            NAME=${BT}-${VERSION}
+            NAME=${VERSION}-${BT}
           elif [ "${BT}" == 'master' ]
           then
             NAME=${VERSION}
