@@ -108,8 +108,7 @@ jobs:
           paths:
             - params
 
-  sonar_scan:
-    context: onix-core-lib-dev
+  sonar_scan:    
     #environment:
     #  ONIX_FIREBASE_BUCKET: 'magnum-dev.appspot.com'
     #  ONIX_FIREBASE_DATABASE: 'https://magnum-dev.firebaseio.com/'
@@ -142,6 +141,7 @@ jobs:
           command: dotnet tool install --global dotnet-sonarscanner
 
       - run:
+          context: onix-core-lib-dev
           name: Sonar Scanner Begin
           command: |
             dotnet sonarscanner begin \
