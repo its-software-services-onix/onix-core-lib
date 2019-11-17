@@ -95,33 +95,28 @@ jobs:
 
       - checkout
 
+      #- restore_cache:
+      #    key: << pipeline.parameters.work_key >>-{{ checksum "OnixCore/OnixCore.csproj" }}
+
       - run:
           name: Restore Packages
           command: dotnet restore
 
-      - restore_cache:
-          key: << pipeline.parameters.work_key >>-{{ checksum "OnixCore/OnixCore.csproj" }}
-      
-      #- run: mvn dependency:go-offline
-      
+      - run:
+          name: Build Packages
+          command: dotnet build OnixCore.sln -c Release -p:Version=${PACKAGE_VERSION}-${BRANCH_TYPE}
+            
       #- save_cache:
       #    paths:
       #      - ~/.m2
-      #    key: << pipeline.parameters.work_key >>-{{ checksum "pom.xml" }}
+      #    key: << pipeline.parameters.work_key >>-{{ checksum "OnixCore/OnixCore.csproj" }}
       
       #- run: mvn -Drevision=${PACKAGE_NAME} package 
       
-      #- store_test_results:
-      #    path: target/surefire-reports
-      
-      #- persist_to_workspace:
-      #    root: .
-      #    paths:
-      #      - target
-
-      #- store_artifacts:
-      #    # Env variables interpolation are not working here!!!
-      #    path: target/${PACKAGE_NAME}.jar
+      - persist_to_workspace:
+          root: .
+          paths:
+            - target
 
   sonar_upload:
     working_directory: ~/<< pipeline.parameters.work_dir >>
