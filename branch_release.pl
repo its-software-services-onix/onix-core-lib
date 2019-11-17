@@ -156,7 +156,7 @@ sub parse_pom
 
         #default: "1.0.1-SNAPSHOT"
 
-        if (($line =~ /^\s*default:\s*\"(SNAPSHOT)\"\s*$/) && (!$found_version))
+        if (($line =~ /^\s*default:\s*\"(.+\-SNAPSHOT)\"\s*$/) && (!$found_version))
         { 
             #Replace only first occurence            
 
