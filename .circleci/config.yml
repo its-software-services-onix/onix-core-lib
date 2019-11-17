@@ -104,7 +104,7 @@ jobs:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
       - image: pjamenaja/dotnet3.0-sonar:1.0.1
-        environment: 
+        environment:
           ONIX_FIREBASE_BUCKET: magnum-dev.appspot.com
           ONIX_FIREBASE_DATABASE: https://magnum-dev.firebaseio.com/
           ONIX_FIREBASE_KEY: AIzaSyBQTGcklnFHTLWfg9PuVKgwXoJo3aILEMU
