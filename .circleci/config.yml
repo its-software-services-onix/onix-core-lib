@@ -34,6 +34,10 @@ parameters:
     type: string
     default: "oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u"
 
+  sonar_key:
+    type: string
+    default: "ceb5eeec9aecce697e659fce520eb98f05c92920"
+
 #Reusable pieces of code here
 commands:
   populate_params:
@@ -58,9 +62,12 @@ workflows:
   btd:
     jobs:
       - initialize
-      - build:
+      - sonar_scan:
           requires:
             - initialize
+      - build:
+          requires:
+            - sonar_scan
       - nuget_upload:
           requires:
             - build
@@ -99,6 +106,34 @@ jobs:
           root: .
           paths:
             - params
+
+  sonar_scan:
+    working_directory: ~/<< pipeline.parameters.work_dir >>
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.0
+
+    steps:
+      - attach_workspace:
+          at: << pipeline.parameters.workspace_path >>
+
+      - populate_params
+
+      - checkout
+
+      - run:
+          name: Sonar Scanner
+          command: | 
+            dotnet sonarscanner begin \
+            /key:pjamenaja_onix-core \
+            /o:pjamenaja \
+            /v:${BUILT_VERSION} \
+            /d:sonar.host.url=https://sonarcloud.io \
+            /d:sonar.branch.name=${CIRCLE_BRANCH} \
+            /d:sonar.cs.opencover.reportsPaths=./coverage.opencover.xml \
+            /d:sonar.javascript.exclusions=**/bootstrap/**,**/jquery/**,**/jquery-validation/**,**/jquery-validation-unobtrusive/** \
+            /d:sonar.verbose=true \
+            /d:sonar.scm.provider=git \
+            /d:sonar.login=<< pipeline.parameters.sonar_key >>
 
   build:
     working_directory: ~/<< pipeline.parameters.work_dir >>
