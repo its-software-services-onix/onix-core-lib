@@ -1,10 +1,10 @@
 version: 2.1
 
-#Reusable pieces of value here
+#Reusable pieces of value here 
 parameters:
   package_version:
     type: string
-    default: "1.0.22"
+    default: "1.0.23"
 
   params_file:
     type: string
