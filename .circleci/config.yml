@@ -22,6 +22,18 @@ parameters:
     type: string
     default: "onix-core-lib"    
 
+  nuget_api:
+    type: string
+    default: "https://api.nuget.org/v3/index.json"  
+
+  package_path:
+    type: string
+    default: "OnixCore/bin/Release"
+
+  nuget_key:
+    type: string
+    default: "ceb5eeec9aecce697e659fce520eb98f05c92920"
+
 #Reusable pieces of code here
 commands:
   populate_params:
@@ -49,7 +61,7 @@ workflows:
       - build:
           requires:
             - initialize
-      - sonar_upload:
+      - nuget_upload:
           requires:
             - build
 
@@ -95,33 +107,23 @@ jobs:
 
       - checkout
 
-      #- restore_cache:
-      #    key: << pipeline.parameters.work_key >>-{{ checksum "OnixCore/OnixCore.csproj" }}
-
       - run:
           name: Restore Packages
           command: dotnet restore
 
       - run:
           name: Build Packages
-          command: dotnet build OnixCore.sln -c Release -p:Version=${PACKAGE_VERSION}-${BRANCH_TYPE}
-            
-      #- save_cache:
-      #    paths:
-      #      - ~/.m2
-      #    key: << pipeline.parameters.work_key >>-{{ checksum "OnixCore/OnixCore.csproj" }}
-      
-      #- run: mvn -Drevision=${PACKAGE_NAME} package 
+          command: dotnet build OnixCore.sln -c Release -p:Version=${PACKAGE_VERSION}-${BRANCH_TYPE}            
       
       - persist_to_workspace:
           root: .
           paths:
-            - OnixCore/bin/Release
+            - << pipeline.parameters.package_path >>
 
-  sonar_upload:
+  nuget_upload:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
-      - image: circleci/python:3.8
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.0
 
     steps:
       - attach_workspace:
@@ -130,3 +132,11 @@ jobs:
       - populate_params
 
       - run: find << pipeline.parameters.workspace_path >> -name *
+
+      - run:
+          name: Publish Packages
+          command: |
+            dotnet nuget \
+            push << pipeline.parameters.workspace_path >>/<< pipeline.parameters.package_path >>/OnixCore.1.0.1-SNAPSHOT-trunk.nupkg \
+            -k << pipeline.parameters.nuget_key >> \
+            -s << pipeline.parameters.nuget_api >>
