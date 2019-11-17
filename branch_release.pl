@@ -16,9 +16,9 @@ my $TEMP_DIR = $ENV{'TEMP'}; #Temp directory
 #SOURCE_BRANCH can be modified if passed -src xxxxx from command line
 my $SOURCE_BRANCH = 'trunk';
 
-my $REPO_NAME = 'onix-core';
-my $POM_FILE = "$TEMP_DIR/$REPO_NAME/GCloudBuild/cloudbuild.yaml";
-my $SOURCE_REPO = 'https://github.com/pjamenaja/' . "$REPO_NAME.git";
+my $REPO_NAME = 'onix-core-lib';
+my $POM_FILE = "$TEMP_DIR/$REPO_NAME/.circleci/config.yml";
+my $SOURCE_REPO = 'https://github.com/its-software-services/' . "$REPO_NAME.git";
 my $TARGET_BRANCH = 'master';
 my $RELEASE_PREFIX = 'release';
 
@@ -154,22 +154,17 @@ sub parse_pom
         my $line = $_;
         my $new_line = $line;
 
-        if (($line =~ /(\$\{SHORT_SHA\})/))
-        { 
-            my $old_version = '\$\{SHORT_SHA\}';
-            my $new_value = '';
-            $new_line =~ s/$old_version/$new_value/ig;
+        #default: "1.0.1-SNAPSHOT"
 
-            print("Replaced [$old_version] with [$new_value]\n");
-        }
-        elsif (($line =~ /^\s*_VERSION\s*:\s*"(.+)"\s*$/) && (!$found_docker_version))
+        if (($line =~ /^\s*default:\s*\"(.+\-SNAPSHOT)\"\s*$/) && (!$found_version))
         { 
-            #Replace only first occurence                        
+            #Replace only first occurence            
+
             my $old_version = $1;
             $new_line =~ s/$old_version/$version/ig;
 
             print("Replaced [$old_version] with [$version]\n");
-            $found_docker_version = true;
+            $found_version = true;
         }
 
         print($oh "$new_line");
@@ -293,7 +288,7 @@ my @COMMANDS =
         "cd $REPO_NAME; mv $POM_FILE.original $POM_FILE", #We don't care version from 'master' branch
 
         "parse_pom($POM_FILE,$RELEASE_VERSION)",
-        "cd $REPO_NAME; git add *; git commit --m 'Auto merge script $RELEASE_VERSION cut from $SOURCE_BRANCH'",        
+        "cd $REPO_NAME; git add .circleci/config.yml *; git commit --m 'Auto merge script $RELEASE_VERSION cut from $SOURCE_BRANCH'",        
         "cd $REPO_NAME; git push origin $RELEASE_BRANCH",
         "cd $REPO_NAME; git tag -a V$RELEASE_VERSION -m 'Release $RELEASE_VERSION'",
         "cd $REPO_NAME; git push origin V$RELEASE_VERSION",
