@@ -67,7 +67,7 @@ jobs:
           DESC=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 2)
           VERSION=<< pipeline.parameters.package_version >>
 
-          if [ "${BT}" == 'release' ] || [ "${BT}" == 'master' ] || [ "${BT}" == 'development' ]
+          if [ "${BT}" == 'release' ] || [ "${BT}" == 'master' ] || [ "${BT}" == 'trunk' ]
           then
             NAME=${BT}-${VERSION}
           else
@@ -96,7 +96,7 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: << pipeline.parameters.work_key >>-{{ checksum "pom.xml" }}
+          key: << pipeline.parameters.work_key >>-{{ checksum "OnixCore/OnixCore.csproj" }}
       
       #- run: mvn dependency:go-offline
       
