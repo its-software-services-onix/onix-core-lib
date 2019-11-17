@@ -119,7 +119,7 @@ jobs:
 
       - run:
           name: Build Packages
-          command: dotnet build OnixCore.sln -c Release -p:Version=${PACKAGE_VERSION}            
+          command: dotnet build OnixCore.sln -c Release -p:Version=${PACKAGE_NAME}            
       
       - persist_to_workspace:
           root: .
@@ -143,6 +143,6 @@ jobs:
           name: Publish Packages
           command: |
             dotnet nuget \
-            push << pipeline.parameters.workspace_path >>/<< pipeline.parameters.package_path >>/OnixCore.${PACKAGE_VERSION}.nupkg \
+            push << pipeline.parameters.workspace_path >>/<< pipeline.parameters.package_path >>/OnixCore.${PACKAGE_NAME}.nupkg \
             -k << pipeline.parameters.nuget_key >> \
             -s << pipeline.parameters.nuget_api >>
