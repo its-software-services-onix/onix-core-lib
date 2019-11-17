@@ -103,7 +103,7 @@ jobs:
   sonar_scan:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
-      - image: pjamenaja/dotnet3.0-sonar:1.0.0
+      - image: pjamenaja/dotnet3.0-sonar:1.0.1
 
     steps:
       - attach_workspace:
