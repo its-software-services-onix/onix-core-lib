@@ -116,7 +116,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - target
+            - OnixCore/bin/Release
 
   sonar_upload:
     working_directory: ~/<< pipeline.parameters.work_dir >>
