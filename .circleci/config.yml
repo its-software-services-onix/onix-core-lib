@@ -83,8 +83,10 @@ jobs:
           then
             NAME=${BT}-${VERSION}
           elif [ "${BT}" == 'master' ]
+          then
             NAME=${VERSION}
           elif [ "${BT}" == 'trunk' ]
+          then
             NAME=${VERSION}-${BT}-${CIRCLE_BUILD_NUM}    
           else
             NAME=${VERSION}-${BT}-${DESC}-${CIRCLE_BUILD_NUM}
