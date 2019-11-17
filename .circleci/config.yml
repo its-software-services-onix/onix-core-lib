@@ -46,6 +46,7 @@ commands:
       - run: 
           name: "Setup custom environment variables"
           command: |
+            echo 'export PATH=$PATH:/root/.dotnet/tools' >> $BASH_ENV   
             while read p; do
               VAR_KEY=$(echo "$p" | cut -d "=" -f 1)
               VAR_VAL=$(echo "$p" | cut -d "=" -f 2)
@@ -101,7 +102,7 @@ jobs:
 
           echo "PACKAGE_NAME=${NAME}" >> << pipeline.parameters.params_file >>
           echo "BRANCH_TYPE=${BT}" >> << pipeline.parameters.params_file >>
-          echo "PACKAGE_VERSION=${VERSION}" >> << pipeline.parameters.params_file >>
+          echo "PACKAGE_VERSION=${VERSION}" >> << pipeline.parameters.params_file >>    
       - persist_to_workspace:
           root: .
           paths:
@@ -126,9 +127,7 @@ jobs:
 
       - run:
           name: Sonar Scanner
-          command: | 
-            export PATH="$PATH:/root/.dotnet/tools"
-
+          command: |
             dotnet sonarscanner begin \
             /key:pjamenaja_onix-core \
             /o:pjamenaja \
