@@ -18,7 +18,7 @@ my $SOURCE_BRANCH = 'trunk';
 
 my $REPO_NAME = 'onix-core-lib';
 my $POM_FILE = "$TEMP_DIR/$REPO_NAME/.circleci/config.yml";
-my $SOURCE_REPO = 'https://github.com/its-software-services/' . "$REPO_NAME.git";
+my $SOURCE_REPO = 'https://github.com/its-software-services-onix/' . "$REPO_NAME.git";
 my $TARGET_BRANCH = 'master';
 my $RELEASE_PREFIX = 'release';
 

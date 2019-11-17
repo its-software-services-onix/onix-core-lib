@@ -30,14 +30,6 @@ parameters:
     type: string
     default: "OnixCore/bin/Release"
 
-  nuget_key:
-    type: string
-    default: "oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u"
-
-  sonar_key:
-    type: string
-    default: "ceb5eeec9aecce697e659fce520eb98f05c92920"
-
 #Reusable pieces of code here
 commands:
   populate_params:
@@ -108,21 +100,10 @@ jobs:
           paths:
             - params
 
-  sonar_scan:    
-    #environment:
-    #  ONIX_FIREBASE_BUCKET: 'magnum-dev.appspot.com'
-    #  ONIX_FIREBASE_DATABASE: 'https://magnum-dev.firebaseio.com/'
-    #  ONIX_FIREBASE_KEY: 'AIzaSyBQTGcklnFHTLWfg9PuVKgwXoJo3aILEMU'
-    #  ONIX_FIREBASE_USERNAME: 'test@test.com'
-    #  ONIX_FIREBASE_PASSWORD: 'test12345'   
-    #  ONIX_SMTP_PASSWORD: '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'  
-    #  ONIX_SMTP_HOST: 'smtp.sendgrid.net'
-    #  ONIX_SMTP_USER: 'apikey'
-    #  ONIX_SMTP_PORT: '587'
-
+  sonar_scan:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
-      - image: mcr.microsoft.com/dotnet/core/sdk:3.0
+      - image: pjamenaja/dotnet3.0-sonar:1.0.0
 
     steps:
       - attach_workspace:
@@ -131,14 +112,6 @@ jobs:
       - populate_params
 
       - checkout
-
-      - run:
-          name: Install Coverlet
-          command: dotnet tool install --global coverlet.console
-
-      - run:
-          name: Install Sonar Scanner
-          command: dotnet tool install --global dotnet-sonarscanner
 
       - run:
           name: Sonar Scanner Begin
@@ -153,7 +126,7 @@ jobs:
             /d:sonar.javascript.exclusions=**/bootstrap/**,**/jquery/**,**/jquery-validation/**,**/jquery-validation-unobtrusive/** \
             /d:sonar.verbose=true \
             /d:sonar.scm.provider=git \
-            /d:sonar.login=<< pipeline.parameters.sonar_key >>
+            /d:sonar.login=${SONAR_KEY}
 
       - run:
           name: Sonar Analyse
@@ -172,7 +145,7 @@ jobs:
 
       - run:
           name: Sonar Scanner End
-          command: dotnet sonarscanner end /d:sonar.login=<< pipeline.parameters.sonar_key >>
+          command: dotnet sonarscanner end /d:sonar.login=${SONAR_KEY}
           
   build:
     working_directory: ~/<< pipeline.parameters.work_dir >>
@@ -218,5 +191,5 @@ jobs:
           command: |
             dotnet nuget \
             push << pipeline.parameters.workspace_path >>/<< pipeline.parameters.package_path >>/OnixCore.${PACKAGE_NAME}.nupkg \
-            -k << pipeline.parameters.nuget_key >> \
+            -k ${NUGET_PUSH_KEY} \
             -s << pipeline.parameters.nuget_api >>
