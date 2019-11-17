@@ -85,7 +85,7 @@ jobs:
   build:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.0
 
     steps:
       - attach_workspace:
@@ -94,6 +94,10 @@ jobs:
       - populate_params
 
       - checkout
+
+      - run:
+          name: Restore Packages
+          command: dotnet restore
 
       - restore_cache:
           key: << pipeline.parameters.work_key >>-{{ checksum "OnixCore/OnixCore.csproj" }}
