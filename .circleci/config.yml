@@ -4,7 +4,7 @@ version: 2.1
 parameters:
   package_version:
     type: string
-    default: "1.0.1-SNAPSHOT"
+    default: "0.0.0"
 
   params_file:
     type: string
@@ -79,11 +79,15 @@ jobs:
           DESC=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 2)
           VERSION=<< pipeline.parameters.package_version >>
 
-          if [ "${BT}" == 'release' ] || [ "${BT}" == 'master' ] || [ "${BT}" == 'trunk' ]
+          if [ "${BT}" == 'release' ]
           then
             NAME=${BT}-${VERSION}
+          elif [ "${BT}" == 'master' ]
+            NAME=${VERSION}
+          elif [ "${BT}" == 'trunk' ]
+            NAME=${VERSION}-${BT}-${CIRCLE_BUILD_NUM}    
           else
-            NAME=${BT}-${DESC}-${VERSION}
+            NAME=${VERSION}-${BT}-${DESC}-${CIRCLE_BUILD_NUM}
           fi
 
           echo "PACKAGE_NAME=${NAME}" >> << pipeline.parameters.params_file >>
@@ -113,7 +117,7 @@ jobs:
 
       - run:
           name: Build Packages
-          command: dotnet build OnixCore.sln -c Release -p:Version=${PACKAGE_VERSION}-${BRANCH_TYPE}            
+          command: dotnet build OnixCore.sln -c Release -p:Version=${PACKAGE_VERSION}            
       
       - persist_to_workspace:
           root: .
@@ -137,6 +141,6 @@ jobs:
           name: Publish Packages
           command: |
             dotnet nuget \
-            push << pipeline.parameters.workspace_path >>/<< pipeline.parameters.package_path >>/OnixCore.1.0.1-SNAPSHOT-trunk.nupkg \
+            push << pipeline.parameters.workspace_path >>/<< pipeline.parameters.package_path >>/OnixCore.${PACKAGE_VERSION}.nupkg \
             -k << pipeline.parameters.nuget_key >> \
             -s << pipeline.parameters.nuget_api >>
