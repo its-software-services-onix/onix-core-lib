@@ -111,7 +111,7 @@ jobs:
   sonar_scan:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
-      - image: circleci/openjdk:8
+      #- image: circleci/openjdk:8
       - image: mcr.microsoft.com/dotnet/core/sdk:3.0
 
     steps:
@@ -144,6 +144,10 @@ jobs:
       - run:
           name: Sonar Analyse
           command: dotnet build OnixCore.sln
+
+      - run:
+          name: Coverlet
+          command: coverlet
 
       - run:
           name: Sonar Scanner End
