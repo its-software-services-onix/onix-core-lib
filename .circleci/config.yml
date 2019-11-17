@@ -151,7 +151,14 @@ jobs:
 
       - run:
           name: Coverlet
-          command: coverlet
+          command: |
+            coverlet './OnixCoreTest/bin/Debug/netcoreapp3.0/OnixCoreTest.dll' \
+            --target 'dotnet' --targetargs 'test . --no-build' --format opencover
+            
+            if [ "$?" -ne "0" ]; then
+              echo "Exit code from coverlet is not zero!!!"
+              exit 1
+            fi
 
       - run:
           name: Sonar Scanner End
