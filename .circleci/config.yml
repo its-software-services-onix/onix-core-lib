@@ -1,0 +1,133 @@
+version: 2.1
+
+#Reusable pieces of value here
+parameters:
+  package_version:
+    type: string
+    default: "1.0.1-SNAPSHOT"
+
+  params_file:
+    type: string
+    default: "params/parameters.list"
+
+  workspace_path:
+    type: string
+    default: "/tmp/workspace"
+
+  work_dir:
+    type: string
+    default: "onix-core-lib"
+
+  work_key:
+    type: string
+    default: "onix-core-lib"    
+
+#Reusable pieces of code here
+commands:
+  populate_params:
+    description: "Setup custom environment variables"
+    steps:
+      - run: 
+          name: "Setup custom environment variables"
+          command: |
+            while read p; do
+              VAR_KEY=$(echo "$p" | cut -d "=" -f 1)
+              VAR_VAL=$(echo "$p" | cut -d "=" -f 2)
+
+              echo "export ${VAR_KEY}=${VAR_VAL}" >> $BASH_ENV
+              echo "Populating with : ${VAR_KEY}=${VAR_VAL}"
+            done < << pipeline.parameters.workspace_path >>/<< pipeline.parameters.params_file >>
+
+
+# Workflow and jobs start here
+workflows:
+  version: 2
+
+  btd:
+    jobs:
+      - initialize
+      - build:
+          requires:
+            - initialize
+      - sonar_upload:
+          requires:
+            - build
+
+jobs:
+  initialize:
+    working_directory: ~/<< pipeline.parameters.work_dir >>
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - run: mkdir -p params
+
+      #Branches should be : devlopment, release/1.0.1, master, feature/JIRA00001
+      - run: |      
+          BT=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 1)
+          DESC=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 2)
+          VERSION=<< pipeline.parameters.package_version >>
+
+          if [ "${BT}" == 'release' ] || [ "${BT}" == 'master' ] || [ "${BT}" == 'development' ]
+          then
+            NAME=${BT}-${VERSION}
+          else
+            NAME=${BT}-${DESC}-${VERSION}
+          fi
+
+          echo "PACKAGE_NAME=${NAME}" >> << pipeline.parameters.params_file >>
+          echo "BRANCH_TYPE=${BT}" >> << pipeline.parameters.params_file >>
+          echo "PACKAGE_VERSION=${VERSION}" >> << pipeline.parameters.params_file >>
+      - persist_to_workspace:
+          root: .
+          paths:
+            - params
+
+  build:
+    working_directory: ~/<< pipeline.parameters.work_dir >>
+    docker:
+      - image: circleci/openjdk:8-jdk-stretch
+
+    steps:
+      - attach_workspace:
+          at: << pipeline.parameters.workspace_path >>
+
+      - populate_params
+
+      - checkout
+
+      - restore_cache:
+          key: << pipeline.parameters.work_key >>-{{ checksum "pom.xml" }}
+      
+      #- run: mvn dependency:go-offline
+      
+      #- save_cache:
+      #    paths:
+      #      - ~/.m2
+      #    key: << pipeline.parameters.work_key >>-{{ checksum "pom.xml" }}
+      
+      #- run: mvn -Drevision=${PACKAGE_NAME} package 
+      
+      #- store_test_results:
+      #    path: target/surefire-reports
+      
+      #- persist_to_workspace:
+      #    root: .
+      #    paths:
+      #      - target
+
+      #- store_artifacts:
+      #    # Env variables interpolation are not working here!!!
+      #    path: target/${PACKAGE_NAME}.jar
+
+  sonar_upload:
+    working_directory: ~/<< pipeline.parameters.work_dir >>
+    docker:
+      - image: circleci/python:3.8
+
+    steps:
+      - attach_workspace:
+          at: << pipeline.parameters.workspace_path >>
+
+      - populate_params
+
+      - run: find << pipeline.parameters.workspace_path >> -name *
