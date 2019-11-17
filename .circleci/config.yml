@@ -123,6 +123,10 @@ jobs:
       - checkout
 
       - run:
+          name: Install Coverlet
+          command: dotnet tool install --global coverlet.console
+
+      - run:
           name: Install Sonar Scanner
           command: dotnet tool install --global dotnet-sonarscanner
 
