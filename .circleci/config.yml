@@ -32,7 +32,7 @@ parameters:
 
   nuget_key:
     type: string
-    default: "ceb5eeec9aecce697e659fce520eb98f05c92920"
+    default: "oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u"
 
 #Reusable pieces of code here
 commands:
