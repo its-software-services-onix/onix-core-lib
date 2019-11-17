@@ -120,15 +120,13 @@ jobs:
 
       - checkout
 
-      #- run:
-      #    name: Install Sonar Scanner
-      #    command: dotnet tool install --global dotnet-sonarscanner
+      - run:
+          name: Install Sonar Scanner
+          command: dotnet tool install --global dotnet-sonarscanner
 
       - run:
           name: Sonar Scanner
           command: | 
-            dotnet tool install --global dotnet-sonarscanner
-            
             dotnet sonarscanner begin \
             /key:pjamenaja_onix-core \
             /o:pjamenaja \
