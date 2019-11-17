@@ -4,7 +4,7 @@ version: 2.1
 parameters:
   package_version:
     type: string
-    default: "1.0.21"
+    default: "1.0.22"
 
   params_file:
     type: string
@@ -30,10 +30,6 @@ parameters:
     type: string
     default: "OnixCore/bin/Release"
 
-  nuget_key:
-    type: string
-    default: "oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u"
-
 #Reusable pieces of code here
 commands:
   populate_params:
@@ -42,6 +38,7 @@ commands:
       - run: 
           name: "Setup custom environment variables"
           command: |
+            echo 'export PATH=$PATH:/root/.dotnet/tools' >> $BASH_ENV   
             while read p; do
               VAR_KEY=$(echo "$p" | cut -d "=" -f 1)
               VAR_VAL=$(echo "$p" | cut -d "=" -f 2)
@@ -58,9 +55,12 @@ workflows:
   btd:
     jobs:
       - initialize
-      - build:
+      - sonar_scan:
           requires:
             - initialize
+      - build:
+          requires:
+            - sonar_scan
       - nuget_upload:
           requires:
             - build
@@ -94,12 +94,59 @@ jobs:
 
           echo "PACKAGE_NAME=${NAME}" >> << pipeline.parameters.params_file >>
           echo "BRANCH_TYPE=${BT}" >> << pipeline.parameters.params_file >>
-          echo "PACKAGE_VERSION=${VERSION}" >> << pipeline.parameters.params_file >>
+          echo "PACKAGE_VERSION=${VERSION}" >> << pipeline.parameters.params_file >>    
       - persist_to_workspace:
           root: .
           paths:
             - params
 
+  sonar_scan:
+    working_directory: ~/<< pipeline.parameters.work_dir >>
+    docker:
+      - image: pjamenaja/dotnet3.0-sonar:1.0.1
+
+    steps:
+      - attach_workspace:
+          at: << pipeline.parameters.workspace_path >>
+
+      - populate_params
+
+      - checkout
+
+      - run:
+          name: Sonar Scanner Begin
+          command: |
+            dotnet sonarscanner begin \
+            /key:pjamenaja_onix-core \
+            /o:pjamenaja \
+            /v:${BUILT_VERSION} \
+            /d:sonar.host.url=https://sonarcloud.io \
+            /d:sonar.branch.name=${CIRCLE_BRANCH} \
+            /d:sonar.cs.opencover.reportsPaths=./coverage.opencover.xml \
+            /d:sonar.javascript.exclusions=**/bootstrap/**,**/jquery/**,**/jquery-validation/**,**/jquery-validation-unobtrusive/** \
+            /d:sonar.verbose=true \
+            /d:sonar.scm.provider=git \
+            /d:sonar.login=${SONAR_KEY}
+
+      - run:
+          name: Sonar Analyse
+          command: dotnet build OnixCore.sln
+
+      - run:
+          name: Coverlet
+          command: |
+            coverlet './OnixCoreTest/bin/Debug/netcoreapp3.0/OnixCoreTest.dll' \
+            --target 'dotnet' --targetargs 'test . --no-build' --format opencover
+
+            if [ "$?" -ne "0" ]; then
+              echo "Exit code from coverlet is not zero!!!"
+              exit 1
+            fi
+
+      - run:
+          name: Sonar Scanner End
+          command: dotnet sonarscanner end /d:sonar.login=${SONAR_KEY}
+          
   build:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
@@ -144,5 +191,5 @@ jobs:
           command: |
             dotnet nuget \
             push << pipeline.parameters.workspace_path >>/<< pipeline.parameters.package_path >>/OnixCore.${PACKAGE_NAME}.nupkg \
-            -k << pipeline.parameters.nuget_key >> \
+            -k ${NUGET_PUSH_KEY} \
             -s << pipeline.parameters.nuget_api >>
