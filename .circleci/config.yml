@@ -112,6 +112,7 @@ jobs:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
       - image: mcr.microsoft.com/dotnet/core/sdk:3.0
+      - image: circleci/openjdk:8
 
     steps:
       - attach_workspace:
