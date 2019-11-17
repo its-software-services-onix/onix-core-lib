@@ -127,6 +127,8 @@ jobs:
       - run:
           name: Sonar Scanner
           command: | 
+            export PATH="$PATH:/root/.dotnet/tools"
+
             dotnet sonarscanner begin \
             /key:pjamenaja_onix-core \
             /o:pjamenaja \
