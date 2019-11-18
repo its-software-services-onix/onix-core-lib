@@ -125,6 +125,10 @@ jobs:
       - checkout
 
       - run:
+          name: Debug Env
+          command: env | grep ONIX_
+
+      - run:
           name: Sonar Scanner Begin
           command: |
             dotnet sonarscanner begin \
