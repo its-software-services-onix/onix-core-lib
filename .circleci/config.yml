@@ -154,7 +154,7 @@ jobs:
             --target 'dotnet' --targetargs 'test . --no-build' --format opencover
 
             if [ "$?" -ne "0" ]; then
-              echo "Exit code from coverlet is not zero but ignore it for now!!! "              
+              echo "Exit code from coverlet is not zero but ignore it for now!!!! "              
               exit 0
             fi
 
