@@ -47,7 +47,6 @@ commands:
               echo "Populating with : ${VAR_KEY}=${VAR_VAL}"
             done < << pipeline.parameters.workspace_path >>/<< pipeline.parameters.params_file >>
 
-
 # Workflow and jobs start here
 workflows:
   version: 2
@@ -104,17 +103,6 @@ jobs:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
       - image: pjamenaja/dotnet3.0-sonar:1.0.1
-        #environment:
-        #  ONIX_FIREBASE_BUCKET: magnum-dev.appspot.com
-        #  ONIX_FIREBASE_DATABASE: https://magnum-dev.firebaseio.com/
-        #  ONIX_FIREBASE_KEY: AIzaSyBQTGcklnFHTLWfg9PuVKgwXoJo3aILEMU
-        #  ONIX_FIREBASE_USERNAME: test@test.com
-        #  ONIX_FIREBASE_PASSWORD: test12345
-        #  ONIX_SMTP_PASSWORD: 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
-        #  ONIX_SMTP_HOST: smtp.sendgrid.net
-        #  ONIX_SMTP_USER: apikey
-        #  ONIX_SMTP_PORT: 587
-        #  SONAR_KEY: ceb5eeec9aecce697e659fce520eb98f05c92920
 
     steps:
       - attach_workspace:
