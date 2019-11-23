@@ -146,6 +146,8 @@ jobs:
               exit 0
             fi
 
+            exit 0
+
       - run:
           name: Sonar Scanner End
           command: dotnet sonarscanner end /d:sonar.login=${SONAR_KEY}
