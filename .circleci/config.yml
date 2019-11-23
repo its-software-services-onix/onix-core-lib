@@ -182,8 +182,6 @@ jobs:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
       - image: mcr.microsoft.com/dotnet/core/sdk:3.0
-        environment:
-          NUGET_PUSH_KEY: oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u
 
     steps:
       - attach_workspace:
