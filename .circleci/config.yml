@@ -135,18 +135,18 @@ jobs:
           name: Sonar Analyse
           command: dotnet build OnixCore.sln
 
-      #- run:
-      #    name: Coverlet
-      #    command: |
-      #      coverlet './OnixCoreTest/bin/Debug/netcoreapp3.0/OnixCoreTest.dll' \
-      #      --target 'dotnet' --targetargs 'test . --no-build' --format opencover
+      - run:
+          name: Coverlet
+          command: |
+            coverlet './OnixCoreTest/bin/Debug/netcoreapp3.0/OnixCoreTest.dll' \
+            --target 'dotnet' --targetargs 'test . --no-build' --format opencover
 
-      #      if [ "$?" -ne "0" ]; then
-      #        echo "Exit code from coverlet is not zero but ignore it for now!!!!"              
-      #        exit 0
-      #      fi
+            if [ "$?" -ne "0" ]; then
+              echo "Exit code from coverlet is not zero but ignore it for now!!!!"              
+              exit 0
+            fi
 
-      #      exit 0
+            exit 0
 
       - run:
           name: Sonar Scanner End
@@ -182,8 +182,6 @@ jobs:
     working_directory: ~/<< pipeline.parameters.work_dir >>
     docker:
       - image: mcr.microsoft.com/dotnet/core/sdk:3.0
-        environment:
-          NUGET_PUSH_KEY: oy2nkpvkrxmkd3g6axdqhxzuzlxzreuebchf22q5ffvn7u
 
     steps:
       - attach_workspace:
