@@ -6,6 +6,14 @@ namespace Its.Onix.Core.NoSQL
 {
 	public class FirebaseNoSqlContextTest
 	{
+        private readonly FirebaseNoSqlContext ctx = null;
+
+        public FirebaseNoSqlContextTest()
+        {
+            ctx = new FirebaseNoSqlContext();
+            Authen(ctx);
+        }
+
         [SetUp]
         public void Setup()
         {
@@ -47,12 +55,8 @@ namespace Its.Onix.Core.NoSQL
         public void SuccessAuthenTest()
         {
             //Just to cover the test coverage
-
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-
             try
             {
-                Authen(ctx);
                 ctx.PostData("unit_testing", DateTime.Now);      
             }
             catch
@@ -84,9 +88,6 @@ namespace Its.Onix.Core.NoSQL
         {
             //Just to cover the test coverage
 
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-            Authen(ctx);
-
             try
             {
                 ctx.PutData("unit_testing", "unit_testing", new String("HELLO"));
@@ -102,9 +103,6 @@ namespace Its.Onix.Core.NoSQL
         public void NoDataToDeleteTest()
         {
             //Just to cover the test coverage
-
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-            Authen(ctx);
 
             try
             {
@@ -124,9 +122,6 @@ namespace Its.Onix.Core.NoSQL
         {
             //Just to cover the test coverage
 
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-            Authen(ctx);
-
             try
             {
                 ctx.PostData("unit_testing", new BaseModel());
@@ -145,9 +140,6 @@ namespace Its.Onix.Core.NoSQL
         {
             //Just to cover the test coverage
 
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-            Authen(ctx);
-
             try
             {
                 ctx.GetObjectList<BaseModel>(node);
@@ -164,9 +156,6 @@ namespace Its.Onix.Core.NoSQL
         {
             //Just to cover the test coverage
 
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-            Authen(ctx);
-
             try
             {
                 ctx.GetSingleObject<BaseModel>("faked_nodes_not_found", "faked_key_not_found");
@@ -181,12 +170,8 @@ namespace Its.Onix.Core.NoSQL
         [TestCase]
         public void RefreshAuthenTokenTest()
         {
-            FirebaseNoSqlContext ctx = new FirebaseNoSqlContext();
-
             try
             {
-                Authen(ctx);
-
                 DateTime lastRefreshDtm = ctx.GetLastRefreshDtm();   
 
                 ctx.PostData("unit_testing", DateTime.Now);
@@ -212,10 +197,6 @@ namespace Its.Onix.Core.NoSQL
         [TestCase(TimeSpan.TicksPerDay + TimeSpan.TicksPerMinute, TimeSpan.TicksPerDay, true)]
         public void RefreshAuthenTokenIntervalTest(long tickEarlier, long refreshInterval, bool shouldRefresh)
         {
-            FirebaseNoSqlContext ctx = new FirebaseNoSqlContext();
-
-            Authen(ctx);
-
             //Must not die if pass null
             ctx.SetLogger(null);
             ctx.GetLogger();

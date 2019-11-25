@@ -15,6 +15,8 @@ namespace Its.Onix.Core.Smtp
         private string smtpUser = "";
         private string smtpPassword = "";
 
+        public abstract void Send(Mail mail);
+
         protected SmtpContextBase()
         {
         }
@@ -37,25 +39,9 @@ namespace Its.Onix.Core.Smtp
             smtpPassword = password;
         }
 
-        public void Send(Mail mail)
+        protected string GetSmtpPassword()
         {
-            SmtpClient client = new SmtpClient(smtpHost, smtpPort);
-            client.UseDefaultCredentials = false;
-            client.Credentials = new NetworkCredential(smtpUser, smtpPassword);
-
-            MailMessage mailMessage = new MailMessage();
-            if (mail.FromName == null)
-            {
-                mailMessage.From = new MailAddress(mail.From);
-            }
-            else
-            {
-                mailMessage.From = new MailAddress(mail.From, mail.FromName);
-            }
-            mailMessage.To.Add(mail.To);
-            mailMessage.Body = mail.Body;
-            mailMessage.Subject = mail.Subject;
-            client.Send(mailMessage);
+            return smtpPassword;
         }
 
         public void SetLogger(ILogger logger)
