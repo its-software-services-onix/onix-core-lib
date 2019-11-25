@@ -1,19 +1,19 @@
 SF:D:\dev\projects\its_workspace\onix-core-lib\OnixCore\Its\Onix\Core\Utils\LogUtils.cs
 FN:7,System.Void Its.Onix.Core.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])
-FNDA:27,System.Void Its.Onix.Core.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])
-DA:8,27
-DA:9,27
+FNDA:18,System.Void Its.Onix.Core.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])
+DA:8,18
+DA:9,18
 DA:10,10
 DA:11,10
 DA:12,10
-DA:13,27
+DA:13,18
 BRDA:9,7,0,10
-BRDA:9,7,1,27
+BRDA:9,7,1,18
 FN:15,System.Void Its.Onix.Core.Utils.LogUtils::LogInformation(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])
-FNDA:21,System.Void Its.Onix.Core.Utils.LogUtils::LogInformation(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])
-DA:16,21
-DA:17,21
-DA:18,21
+FNDA:12,System.Void Its.Onix.Core.Utils.LogUtils::LogInformation(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])
+DA:16,12
+DA:17,12
+DA:18,12
 FN:20,System.Void Its.Onix.Core.Utils.LogUtils::LogError(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])
 FNDA:2,System.Void Its.Onix.Core.Utils.LogUtils::LogError(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])
 DA:21,2
@@ -534,12 +534,12 @@ DA:47,14
 DA:48,14
 DA:49,14
 DA:51,14
-DA:52,2
-DA:53,2
-DA:54,2
+DA:52,3
+DA:53,3
+DA:54,3
 DA:56,14
 DA:57,14
-BRDA:51,40,0,2
+BRDA:51,40,0,3
 BRDA:51,40,1,14
 FN:132,System.DateTime Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetLastRefreshDtm()
 FNDA:6,System.DateTime Its.Onix.Core.NoSQL.FirebaseNoSqlContext::GetLastRefreshDtm()
@@ -557,14 +557,14 @@ DA:143,4
 DA:144,4
 DA:145,4
 FN:147,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
-FNDA:14,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
-DA:148,14
-DA:149,14
-DA:150,14
-DA:151,14
-DA:152,14
-DA:154,14
-DA:155,13
+FNDA:4,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
+DA:148,4
+DA:149,4
+DA:150,4
+DA:151,4
+DA:152,4
+DA:154,4
+DA:155,3
 FN:157,System.String Its.Onix.Core.NoSQL.FirebaseNoSqlContext::PostData(System.String,System.Object)
 FNDA:8,System.String Its.Onix.Core.NoSQL.FirebaseNoSqlContext::PostData(System.String,System.Object)
 DA:158,8
@@ -612,33 +612,33 @@ DA:199,3
 DA:200,3
 DA:201,3
 FN:18,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::.ctor()
-FNDA:16,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::.ctor()
-DA:19,16
-DA:20,16
-DA:22,16
-DA:23,16
-DA:24,16
-DA:25,16
-DA:26,16
+FNDA:6,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext::.ctor()
+DA:19,6
+DA:20,6
+DA:22,6
+DA:23,6
+DA:24,6
+DA:25,6
+DA:26,6
 FN:36,System.Threading.Tasks.Task`1<System.String> Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<>c__DisplayClass8_0::<AuthenToFirebase>b__0()
-FNDA:28,System.Threading.Tasks.Task`1<System.String> Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<>c__DisplayClass8_0::<AuthenToFirebase>b__0()
-DA:37,28
+FNDA:19,System.Threading.Tasks.Task`1<System.String> Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<>c__DisplayClass8_0::<AuthenToFirebase>b__0()
+DA:37,19
 FN:28,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<AuthenToFirebase>d__8::MoveNext()
-FNDA:16,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<AuthenToFirebase>d__8::MoveNext()
-DA:29,16
-DA:30,16
-DA:31,16
-DA:33,15
-DA:34,15
-DA:35,15
-DA:36,15
-DA:38,15
-DA:40,15
-DA:41,15
-DA:43,15
-DA:44,15
-BRDA:31,99,0,16
-BRDA:31,99,1,16
+FNDA:7,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<AuthenToFirebase>d__8::MoveNext()
+DA:29,7
+DA:30,7
+DA:31,7
+DA:33,6
+DA:34,6
+DA:35,6
+DA:36,6
+DA:38,6
+DA:40,6
+DA:41,6
+DA:43,6
+DA:44,6
+BRDA:31,99,0,7
+BRDA:31,99,1,7
 FN:59,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<PostFirebaseData>d__10::MoveNext()
 FNDA:8,System.Void Its.Onix.Core.NoSQL.FirebaseNoSqlContext/<PostFirebaseData>d__10::MoveNext()
 DA:60,8

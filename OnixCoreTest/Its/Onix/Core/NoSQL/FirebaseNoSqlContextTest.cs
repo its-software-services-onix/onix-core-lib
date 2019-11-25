@@ -6,6 +6,14 @@ namespace Its.Onix.Core.NoSQL
 {
 	public class FirebaseNoSqlContextTest
 	{
+        private readonly FirebaseNoSqlContext ctx = null;
+
+        public FirebaseNoSqlContextTest()
+        {
+            ctx = new FirebaseNoSqlContext();
+            Authen(ctx);
+        }
+
         [SetUp]
         public void Setup()
         {
@@ -48,11 +56,11 @@ namespace Its.Onix.Core.NoSQL
         {
             //Just to cover the test coverage
 
-            INoSqlContext ctx = new FirebaseNoSqlContext();
+            //INoSqlContext ctx = new FirebaseNoSqlContext();
 
             try
             {
-                Authen(ctx);
+                //Authen(ctx);
                 ctx.PostData("unit_testing", DateTime.Now);      
             }
             catch
@@ -84,8 +92,8 @@ namespace Its.Onix.Core.NoSQL
         {
             //Just to cover the test coverage
 
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-            Authen(ctx);
+            //INoSqlContext ctx = new FirebaseNoSqlContext();
+            //Authen(ctx);
 
             try
             {
@@ -103,8 +111,8 @@ namespace Its.Onix.Core.NoSQL
         {
             //Just to cover the test coverage
 
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-            Authen(ctx);
+            //INoSqlContext ctx = new FirebaseNoSqlContext();
+            //Authen(ctx);
 
             try
             {
@@ -124,8 +132,8 @@ namespace Its.Onix.Core.NoSQL
         {
             //Just to cover the test coverage
 
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-            Authen(ctx);
+            //INoSqlContext ctx = new FirebaseNoSqlContext();
+            //Authen(ctx);
 
             try
             {
@@ -145,8 +153,8 @@ namespace Its.Onix.Core.NoSQL
         {
             //Just to cover the test coverage
 
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-            Authen(ctx);
+            //INoSqlContext ctx = new FirebaseNoSqlContext();
+            //Authen(ctx);
 
             try
             {
@@ -164,8 +172,8 @@ namespace Its.Onix.Core.NoSQL
         {
             //Just to cover the test coverage
 
-            INoSqlContext ctx = new FirebaseNoSqlContext();
-            Authen(ctx);
+            //INoSqlContext ctx = new FirebaseNoSqlContext();
+            //Authen(ctx);
 
             try
             {
@@ -181,11 +189,11 @@ namespace Its.Onix.Core.NoSQL
         [TestCase]
         public void RefreshAuthenTokenTest()
         {
-            FirebaseNoSqlContext ctx = new FirebaseNoSqlContext();
+            //FirebaseNoSqlContext ctx = new FirebaseNoSqlContext();
 
             try
             {
-                Authen(ctx);
+                //Authen(ctx);
 
                 DateTime lastRefreshDtm = ctx.GetLastRefreshDtm();   
 
@@ -212,9 +220,9 @@ namespace Its.Onix.Core.NoSQL
         [TestCase(TimeSpan.TicksPerDay + TimeSpan.TicksPerMinute, TimeSpan.TicksPerDay, true)]
         public void RefreshAuthenTokenIntervalTest(long tickEarlier, long refreshInterval, bool shouldRefresh)
         {
-            FirebaseNoSqlContext ctx = new FirebaseNoSqlContext();
+            //FirebaseNoSqlContext ctx = new FirebaseNoSqlContext();
 
-            Authen(ctx);
+            //Authen(ctx);
 
             //Must not die if pass null
             ctx.SetLogger(null);
